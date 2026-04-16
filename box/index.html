@@ -1,0 +1,1948 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+  <script>
+  window.pixelId = "66a3fc115f57e7496bcf1525";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Colchão Inflável Joyfox + Bomba Elétrica + Travesseiros</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+
+
+</script>
+    <style>
+      :root {
+        --ml-yellow: #ffe600;
+        --ml-blue: #3483fa;
+        --ml-blue-dark: #2968c8;
+        --ml-bg-gray: #ebebeb;
+        --ml-text-dark: #333;
+        --ml-green: #00a650;
+        --ml-orange: #ff7733;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Roboto", sans-serif;
+        -webkit-tap-highlight-color: transparent;
+      }
+      body {
+        background-color: var(--ml-bg-gray);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        padding-bottom: 80px;
+      }
+
+      /* HEADER */
+      .ml-header-container {
+        background-color: var(--ml-yellow);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: height 0.3s ease;
+        height: 98px;
+      }
+      .ml-header-container.compact-mode {
+        height: 56px;
+      }
+      .header-content-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      .header-full {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transition:
+          opacity 0.2s ease,
+          transform 0.2s ease;
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .header-top-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 12px 0 12px;
+        height: 48px;
+      }
+      .header-logo-full {
+        height: 28px;
+        width: auto;
+      }
+      .icon-btn {
+        font-size: 20px;
+        color: #333;
+        cursor: pointer;
+      }
+      .search-row {
+        padding: 8px 12px 12px 12px;
+      }
+      .search-input-box {
+        background-color: #fff;
+        height: 38px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        padding: 0 12px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        width: 100%;
+      }
+      .search-text {
+        color: #999;
+        font-size: 15px;
+        flex: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .header-compact {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 12px;
+        gap: 12px;
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+        transition:
+          opacity 0.2s ease,
+          transform 0.2s ease;
+      }
+      .logo-circle {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .logo-circle img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .search-compact {
+        flex: 1;
+        background-color: #fff;
+        height: 34px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+      }
+      .compact-icons {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        flex-shrink: 0;
+      }
+      .burger-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+      .notif-badge {
+        position: absolute;
+        top: -6px;
+        right: -6px;
+        background-color: #d50000;
+        color: #fff;
+        font-size: 10px;
+        font-weight: 700;
+        height: 14px;
+        width: 14px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .ml-header-container.compact-mode .header-full {
+        opacity: 0;
+        transform: translateY(-20px);
+        pointer-events: none;
+      }
+      .ml-header-container.compact-mode .header-compact {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+
+      .location-bar {
+        background-color: #ffdf00;
+        padding: 10px 16px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        color: rgba(51, 51, 51, 0.9);
+        cursor: pointer;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        width: 100%;
+      }
+      .location-text {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 85vw;
+      }
+
+      /* PRODUTO */
+      .product-body {
+        background-color: #fff;
+        padding: 16px;
+        border-radius: 0 0 8px 8px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        margin-bottom: 20px;
+      }
+      .brand-link {
+        display: block;
+        color: var(--ml-blue);
+        font-size: 13px;
+        text-decoration: none;
+        margin-bottom: 10px;
+        cursor: pointer;
+      }
+      .product-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 13px;
+        color: #999;
+        margin-bottom: 8px;
+      }
+      .rating-container {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+      .rating-stars {
+        color: var(--ml-blue);
+        font-size: 14px;
+        margin-top: -2px;
+      }
+      .badges-row {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 10px;
+        flex-wrap: wrap;
+      }
+      .badge-orange {
+        background-color: var(--ml-orange);
+        color: #fff;
+        font-size: 11px;
+        font-weight: 700;
+        padding: 3px 6px;
+        border-radius: 3px;
+        text-transform: uppercase;
+        display: inline-block;
+      }
+      .badge-rank-link {
+        color: var(--ml-blue);
+        font-size: 12px;
+        font-weight: 400;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .product-title {
+        font-size: 18px;
+        font-weight: 400;
+        color: #333;
+        line-height: 1.3;
+        margin-bottom: 16px;
+      }
+
+      /* CARROSSEL */
+      .pdp-image-area {
+        position: relative;
+        width: 100%;
+        height: 320px;
+        margin-bottom: 10px;
+        overflow: hidden;
+      }
+      .pdp-slides-track {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        height: 100%;
+      }
+      .pdp-slides-track::-webkit-scrollbar {
+        display: none;
+      }
+      .pdp-slide {
+        flex: 0 0 100%;
+        width: 100%;
+        height: 100%;
+        scroll-snap-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .main-img {
+        max-width: 90%;
+        max-height: 100%;
+        object-fit: contain;
+        mix-blend-mode: multiply;
+      }
+      .img-counter-badge {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: #eee;
+        padding: 2px 8px;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: bold;
+        color: #333;
+        z-index: 10;
+      }
+      .icon-heart-pos {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 10;
+      }
+      .icon-share-pos {
+        position: absolute;
+        bottom: 10px;
+        right: 0;
+        z-index: 10;
+      }
+      .overlay-icon-circle {
+        width: 36px;
+        height: 36px;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--ml-blue);
+        font-size: 18px;
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: all 0.2s;
+      }
+      .overlay-icon-circle.liked {
+        color: var(--ml-blue);
+      }
+      .overlay-icon-circle.liked i {
+        font-weight: 900;
+      }
+      .pagination-dots {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 20px;
+      }
+      .p-dot {
+        width: 7px;
+        height: 7px;
+        background: #ccc;
+        border-radius: 50%;
+        transition: background 0.2s;
+      }
+      .p-dot.active {
+        background: var(--ml-blue);
+      }
+
+      /* SELETOR DE TAMANHO DINÂMICO */
+      .qty-selector-container {
+        margin-bottom: 20px;
+        border-bottom: 1px solid #f0f0f0;
+        padding-bottom: 20px;
+      }
+      .qty-title {
+        font-size: 14px;
+        color: #333;
+        margin-bottom: 10px;
+      }
+      .qty-buttons-row {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .volt-btn {
+        background: #fff;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        padding: 10px 0;
+        width: calc(25% - 6px);
+        text-align: center;
+        font-size: 13px;
+        font-weight: 500;
+        color: #333;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .volt-btn.selected {
+        border: 2px solid var(--ml-blue);
+        color: var(--ml-blue);
+        font-weight: 700;
+        background-color: #f5f9ff;
+      }
+
+      /* PREÇOS E INFOS */
+      .price-section {
+        margin-bottom: 12px;
+      }
+      .old-price {
+        font-size: 13px;
+        color: #999;
+        text-decoration: line-through;
+      }
+      .price-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .main-price {
+        font-size: 34px;
+        font-weight: 300;
+        color: #333;
+      }
+      .discount-pill {
+  font-size: 16px;
+  font-weight: 500;         /* suave, não muito negrito */
+  color: #00a65e;           /* cor da letra */
+  background-color: #e5f6ed;/* cor de fundo */
+  padding: 4px 8px;         /* espaço interno */
+  border-radius: 6px;       /* cantos arredondados */
+  display: inline-block;     /* evita que ocupe a linha toda */
+}
+      .installments-row {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-top: 4px;
+        font-size: 16px;
+      }
+      .installments-text-black {
+        color: #333;
+        font-weight: 400;
+      }
+      .installments-text-green {
+        color: var(--ml-green);
+        font-weight: 500;
+      }
+      .payment-link {
+        font-size: 14px;
+        color: var(--ml-blue);
+        text-decoration: none;
+        display: block;
+        margin-top: 5px;
+      }
+
+      .shipping-section {
+        margin-bottom: 20px;
+      }
+      .shipping-tag {
+        background-color: var(--ml-green);
+        color: #fff;
+        font-size: 12px;
+        font-weight: 700;
+        padding: 2px 4px;
+        border-radius: 3px;
+        display: inline-block;
+        margin-bottom: 6px;
+      }
+      .shipping-text {
+        font-size: 16px;
+        line-height: 1.3;
+      }
+      .text-green {
+        color: var(--ml-green);
+        font-weight: 500;
+      }
+      .icon-full {
+        color: var(--ml-green);
+        font-style: italic;
+        font-weight: 900;
+        font-size: 13px;
+        margin-left: 5px;
+      }
+      .text-date {
+        color: rgba(0, 0, 0, 0.8);
+        font-weight: 300;
+      }
+      .shipping-link {
+        font-size: 13px;
+        color: var(--ml-blue);
+        text-decoration: none;
+        display: block;
+        margin-top: 4px;
+      }
+
+      .actions-container {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 30px;
+      }
+      .btn-buy {
+        background-color: var(--ml-blue);
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        height: 48px;
+        font-size: 16px;
+        font-weight: 600;
+        width: 100%;
+        cursor: pointer;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s;
+      }
+      .btn-buy:active {
+        background-color: var(--ml-blue-dark);
+      }
+
+      /* VIDEO CUSTOMIZADO 9:16 */
+      .video-container {
+        position: relative;
+        width: 100%;
+        padding-top: 177.77%;
+        background-color: #000;
+        border-radius: 12px;
+        overflow: hidden;
+        cursor: pointer;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+      .video-element {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+      }
+      .video-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        transition: opacity 0.3s ease;
+      }
+      .video-container.playing .video-overlay {
+        opacity: 0;
+        pointer-events: none;
+      }
+      .play-button {
+        width: 70px;
+        height: 70px;
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(4px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 24px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        animation: pulse-play 2s infinite;
+        padding-left: 4px;
+      }
+      @keyframes pulse-play {
+        0% {
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+        }
+        70% {
+          transform: scale(1.05);
+          box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+        }
+        100% {
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+        }
+      }
+
+      /* SEÇÕES INFERIORES */
+      .bottom-content-area {
+        background-color: #fff;
+        padding: 0 16px 20px 16px;
+        margin-top: 10px;
+      }
+      .seller-trust-card {
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 16px;
+        margin: 20px 0;
+        background: #fff;
+      }
+      .st-header {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .logo-mp-left {
+        width: 40px;
+        height: auto;
+        display: block;
+      }
+      .st-platinum-title {
+        color: #00a650;
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 2px;
+      }
+      .st-sub {
+        font-size: 12px;
+        color: #666;
+      }
+      .st-color-bar {
+        display: flex;
+        height: 8px;
+        border-radius: 4px;
+        overflow: hidden;
+        gap: 2px;
+        margin-bottom: 15px;
+      }
+      .bar-seg {
+        flex: 1;
+        background-color: #fff0f0;
+      }
+      .bar-seg.active {
+        background-color: #39b54a;
+        height: 10px;
+        margin-top: -1px;
+      }
+      .st-stats-row {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .st-stat-item {
+        flex: 1;
+        padding: 0 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .st-stat-value {
+        font-size: 18px;
+        color: #333;
+        font-weight: 400;
+      }
+      .st-stat-label {
+        font-size: 10px;
+        color: #666;
+        line-height: 1.2;
+        margin-top: 2px;
+      }
+      .st-icon-check {
+        font-size: 16px;
+        margin-bottom: 4px;
+        color: #39b54a;
+        display: block;
+      }
+      .warranty-list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+      }
+      .w-item {
+        display: flex;
+        gap: 12px;
+        font-size: 13px;
+        color: #666;
+        align-items: flex-start;
+      }
+      .w-icon {
+        color: #999;
+        font-size: 18px;
+        margin-top: 0;
+        min-width: 20px;
+        text-align: center;
+      }
+      .w-link {
+        color: var(--ml-blue);
+        text-decoration: none;
+      }
+	  
+	  .w-link.disabled {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none; /* opcional */
+}
+
+      .description-box {
+        padding: 20px 0;
+        border-top: 1px solid #eee;
+        margin-bottom: 0;
+      }
+      .desc-title {
+        font-size: 20px;
+        color: #333;
+        font-weight: 400;
+        margin-bottom: 15px;
+      }
+      .desc-content {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.5;
+      }
+      .tech-list {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 20px;
+      }
+      .tech-list li {
+        margin-bottom: 8px;
+        font-size: 14px;
+        color: #333;
+        display: flex;
+        gap: 6px;
+      }
+      .tech-list li::before {
+        content: "•";
+        color: #999;
+      }
+
+      /* Tabela de especificações ML style */
+      .specs-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        font-size: 14px;
+      }
+      .specs-table tr:nth-child(odd) {
+        background-color: #f5f5f5;
+      }
+      .specs-table td {
+        padding: 12px 10px;
+        color: #333;
+      }
+      .specs-table td:first-child {
+        width: 50%;
+        font-weight: 500;
+      }
+
+      /* SEÇÃO DE IMAGENS DE DESTAQUE */
+      .triple-image-section {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 20px;
+        width: 100%;
+      }
+      .feature-img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border: 1px solid #eee;
+      }
+
+      /* AVALIAÇÕES */
+      .reviews-section {
+        background-color: #fff;
+        padding: 20px 16px;
+        margin-top: 10px;
+        border-top: 1px solid #eee;
+      }
+      .reviews-header-score {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+      .score-big {
+        font-size: 48px;
+        font-weight: 300;
+        color: #333;
+      }
+      .score-stars-big {
+        color: #3483fa;
+        font-size: 24px;
+      }
+      .score-count {
+        color: #999;
+        font-size: 14px;
+      }
+      .review-card {
+        background-color: #fff;
+        padding: 16px;
+        border: 1px solid #eee;
+        border-radius: 8px;
+        margin-bottom: 16px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      }
+      .review-header {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 4px;
+      }
+      .review-name {
+        font-size: 14px;
+        font-weight: 700;
+        color: #333;
+      }
+      .review-rating-row {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        margin-bottom: 10px;
+      }
+      .review-stars {
+        color: #3483fa;
+        font-size: 16px;
+        letter-spacing: 1px;
+      }
+      .review-date-ago {
+        font-size: 12px;
+        color: #999;
+      }
+      .review-content {
+        font-size: 14px;
+        color: #333;
+        line-height: 1.4;
+        margin-bottom: 12px;
+      }
+      .review-photos-carousel {
+        display: flex;
+        gap: 8px;
+        overflow-x: auto;
+        padding-bottom: 5px;
+        margin-bottom: 12px;
+        scrollbar-width: none;
+      }
+      .review-photo-item {
+        width: 90px;
+        height: 90px;
+        border-radius: 6px;
+        object-fit: cover;
+        flex-shrink: 0;
+        background-color: #f0f0f0;
+        cursor: pointer;
+      }
+
+      .review-actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .review-btn-useful {
+        border: 1px solid #e0e0e0;
+        border-radius: 20px;
+        padding: 6px 12px;
+        background: #fff;
+        font-size: 13px;
+        color: #666;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .review-menu {
+        color: #999;
+        font-size: 14px;
+        padding: 5px;
+        cursor: pointer;
+      }
+
+      /* PAGAMENTO E FOOTER */
+      .payment-methods-slider-container {
+        background-color: #fff;
+        text-align: center;
+        padding: 20px 0;
+        border-top: 1px solid #f0f0f0;
+        margin-top: 10px;
+        overflow: hidden;
+      }
+      .payment-track {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+      .payment-slide {
+        flex: 0 0 100%;
+        width: 100%;
+        scroll-snap-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20px;
+      }
+      .payment-icon-svg {
+        width: 50px;
+        height: 35px;
+        margin-bottom: 10px;
+        fill: #3483fa;
+      }
+      .payment-title {
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 5px;
+        font-weight: 400;
+      }
+      .payment-desc {
+        font-size: 12px;
+        color: #999;
+        line-height: 1.4;
+        margin: 0 auto 10px auto;
+      }
+      .payment-dots {
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+        margin-top: 15px;
+      }
+      .pm-dot {
+        width: 6px;
+        height: 6px;
+        background-color: #e0e0e0;
+        border-radius: 50%;
+      }
+      .pm-dot.active {
+        background-color: var(--ml-blue);
+      }
+
+      .main-footer {
+        background-color: #fff;
+        padding: 20px 10px 40px 10px;
+        border-top: 1px solid #f5f5f5;
+        text-align: center;
+        margin-top: 20px;
+      }
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px 20px;
+        margin-bottom: 25px;
+      }
+      .footer-links a {
+        color: #333;
+        text-decoration: none;
+        font-size: 12px;
+      }
+      .footer-legal {
+        color: #999;
+        font-size: 11px;
+        line-height: 1.4;
+      }
+	  
+	  .footer-legal1 {
+        color: #121212;
+        font-size: 12px;
+        line-height: 1.4;
+      }
+      .footer-legal2 {
+        color: #999;
+        font-size: 11px;
+        line-height: 1.4;
+      }
+
+      .sticky-footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        padding: 10px 16px;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+        transform: translateY(0);
+        transition: transform 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .sticky-footer.hidden {
+        transform: translateY(100%);
+      }
+      .sticky-content {
+        width: 100%;
+        display: flex;
+        gap: 15px;
+        align-items: center;
+      }
+      .sticky-price-info {
+        display: flex;
+        flex-direction: column;
+      }
+      .sticky-price-small {
+        font-size: 20px;
+        font-weight: 300;
+        color: #333;
+        line-height: 1;
+      }
+      .sticky-text-small {
+        font-size: 10px;
+        color: #00a650;
+        font-weight: 500;
+        margin-top: 2px;
+      }
+      .sticky-btn {
+        flex: 1;
+        margin: 0;
+      }
+
+      /* MODAL LIGHTBOX */
+      .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.85);
+        z-index: 3000;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      .modal-overlay.show {
+        display: flex;
+        opacity: 1;
+      }
+      .modal-content {
+        max-width: 90%;
+        max-height: 80vh;
+        border-radius: 4px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      }
+      .modal-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 35px;
+        color: #fff;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 3001;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="imageModal" class="modal-overlay" onclick="closeImageModal()">
+      <span class="modal-close">×</span>
+      <img class="modal-content" id="modalImage" alt="Zoom Avaliação" onclick="event.stopPropagation()">
+    </div>
+
+    <header class="ml-header-container">
+      <div class="header-content-wrapper">
+        <div class="header-full">
+          <div class="header-top-row">
+            <div class="header-left">
+              <i class="fa-solid fa-bars icon-btn"></i>
+            </div>
+            <img src="images/logo.png" alt="Mercado Livre" class="header-logo-full">
+            <div class="header-right">
+              <div class="cart-container">
+                <i class="fa-solid fa-cart-shopping icon-btn"></i>
+              </div>
+            </div>
+          </div>
+          <div class="search-row">
+            <div class="search-input-box">
+              <i class="fa-solid fa-magnifying-glass" style="color: #ccc; margin-right: 10px"></i><span class="search-text">Buscar produtos, muito mais...</span>
+            </div>
+          </div>
+        </div>
+        <div class="header-compact">
+          <div class="logo-circle"><img src="images/logo.png" alt="ML"></div>
+          <div class="search-compact">
+            <i class="fa-solid fa-magnifying-glass" style="color: #ccc; margin-right: 8px; font-size: 14px"></i><span class="search-text" style="font-size: 14px">Estou buscando...</span>
+          </div>
+          <div class="compact-icons">
+            <div class="burger-container">
+              <i class="fa-solid fa-bars icon-btn"></i><span class="notif-badge">3</span>
+            </div>
+            <i class="fa-solid fa-cart-shopping icon-btn"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="location-bar" id="locationBar">
+      <i class="fa-solid fa-location-dot" style="font-size: 14px; opacity: 0.6"></i>
+      <span class="location-text" id="user-location-text">Enviar para Capital, SP</span>
+      <i class="fa-solid fa-chevron-right" style="font-size: 10px; margin-left: auto; opacity: 0.5"></i>
+    </div>
+
+    <main class="product-body">
+      <div class="product-meta">
+        <span>Novo | +10mil vendidos</span>
+        <div class="rating-container">
+          <span>4.9</span><span class="rating-stars">★★★★★</span><span style="color: #999; font-size: 11px; margin-left: 2px">(12.840)</span>
+        </div>
+      </div>
+
+      <div class="badges-row">
+        <span class="badge-orange">MAIS VENDIDO</span><a href="#" class="badge-rank-link">1º em Colchões Infláveis</a>
+      </div>
+
+      <h1 class="product-title">
+        Colchão Inflável JoyFox + Bomba Eletrica Bateria Lítio + 2 Travesseiros Joyfox
+      </h1>
+
+      <div class="pdp-image-area">
+        <div class="img-counter-badge" id="image-counter">1/5</div>
+        <div class="pdp-slides-track" id="pdpTrack"><div class="pdp-slide"><img src="images/colchao1.png" alt="Colchão Inflável Joyfox Premium" class="main-img" id="main-product-image"></div><div class="pdp-slide"><img src="images/colchao2.png" alt="Colchão Inflável Joyfox Premium" class="main-img"></div><div class="pdp-slide"><img src="images/colchao3.png" alt="Colchão Inflável Joyfox Premium" class="main-img"></div><div class="pdp-slide"><img src="images/colchao4.png" alt="Colchão Inflável Joyfox Premium" class="main-img"></div><div class="pdp-slide"><img src="images/colchao5.png" alt="Colchão Inflável Joyfox Premium" class="main-img"></div></div>
+        <div class="icon-heart-pos overlay-icon-circle" style="top: 10px; right: 10px" id="heartBtn">
+          <i class="fa-regular fa-heart"></i>
+        </div>
+        <div class="icon-share-pos overlay-icon-circle" style="bottom: 10px; right: 10px" id="shareBtn">
+          <i class="fa-solid fa-share-nodes"></i>
+        </div>
+      </div>
+      <div class="pagination-dots" id="pdpDots">
+        <div class="p-dot active"></div>
+        <div class="p-dot"></div>
+        <div class="p-dot"></div>
+        <div class="p-dot"></div>
+        <div class="p-dot"></div>
+      </div>
+
+      <div class="qty-selector-container" id="sizeSelectorArea">
+        <p class="qty-title">
+          Tamanho: <strong id="size-text">Queen</strong> | Cor: Creme
+        </p>
+        <div class="qty-buttons-row">
+          <button class="qty-btn volt-btn" onclick="selectSize('Solteiro', this)">
+            Solteiro
+          </button>
+          <button class="qty-btn volt-btn" onclick="selectSize('Casal', this)">
+            Casal
+          </button>
+          <button class="qty-btn volt-btn selected" onclick="selectSize('Queen', this)">
+            Queen
+          </button>
+          <button class="qty-btn volt-btn" onclick="selectSize('King', this)">
+            King
+          </button>
+        </div>
+      </div>
+
+      <div class="price-section">
+        <div class="old-price">R$ 599,90</div>
+        <div class="price-row">
+          <div class="main-price">
+            R$ <span id="main-price-value">139</span><span id="main-price-cents" style="font-size: 18px; vertical-align: super">90</span>
+          </div>
+          <div class="discount-pill">70% OFF</div>
+        </div>
+        <div class="installments-row">
+          <i class="fa-regular fa-credit-card" style="font-size: 14px; margin-right: 4px"></i>
+          <span class="installments-text-black">em 10x de </span><span class="installments-text-green"> R$ <span id="installments-value">13,99</span> sem juros</span>
+        </div>
+        <a href="#" class="payment-link" style="pointer-events: none; cursor: default;">Ver os meios de pagamento</a>
+      </div>
+
+      <div class="shipping-section">
+        <div class="shipping-tag">FRETE GRÁTIS</div>
+        <div class="shipping-text">
+          <span class="text-green">Chegará grátis amanhã
+            <span class="icon-full"><i class="fa-solid fa-bolt"></i> FULL</span></span>
+          <br><!--<span class="text-date" id="delivery-estimate">calculando...</span>-->
+        </div>
+		<a href="#" class="payment-link" style="pointer-events: none; cursor: default;">Mais detalhes e formas de entrega</a>
+      </div>
+
+      <div style="
+          background: #f5f5f5;
+          padding: 12px 16px;
+          border-radius: 6px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 20px;
+        ">
+        <span id="stock-display-container">Quantidade: <strong id="qty-bold-text">1 Unidade - Queen</strong>
+          <span style="color: #999">(Disponível)</span></span>
+      </div>
+
+      <div class="actions-container" id="main-actions-area">
+        <a href="https://pay.comprasreaisdodia.com/bz5KZbEMLRz37dL" id="btn-buy-now" class="btn-buy">Comprar agora</a> <!-- URL CHECKOUT -->
+      </div>
+    </main>
+
+    <div class="bottom-content-area">
+      <div class="seller-trust-card">
+        <div class="st-header">
+          <img src="images/logo_mp.svg" alt="Mercado Pago" class="logo-mp-left">
+          <div class="st-text-col">
+            <div class="st-platinum-title">Mercado Líder Platinum</div>
+            <div class="st-sub">Loja Oficial Joyfox</div>
+          </div>
+        </div>
+        <div class="st-color-bar">
+          <div class="bar-seg"></div>
+          <div class="bar-seg"></div>
+          <div class="bar-seg"></div>
+          <div class="bar-seg"></div>
+          <div class="bar-seg active"></div>
+        </div>
+        <div class="st-stats-row">
+          <div class="st-stat-item">
+            <span class="st-stat-value">+100mil</span><span class="st-stat-label">Vendas nos últimos 60 dias</span>
+          </div>
+          <div class="st-stat-item">
+            <i class="fa-regular fa-message st-icon-check"></i><span class="st-stat-label">Presta bom atendimento</span>
+          </div>
+          <div class="st-stat-item">
+            <i class="fa-regular fa-clock st-icon-check"></i><span class="st-stat-label">Entrega os produtos dentro do prazo</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="warranty-list">
+        <div class="w-item">
+          <i class="fa-solid fa-arrow-rotate-left w-icon"></i>
+          <div>
+            <a href="#" class="w-link disabled">Devolução grátis.</a> Você tem 30 dias a
+            partir da data de recebimento.
+          </div>
+        </div>
+        <div class="w-item">
+          <i class="fa-solid fa-shield-halved w-icon"></i>
+          <div>
+            <a href="#" class="w-link disabled">Compra Garantida.</a> Receba o produto
+            que está esperando ou devolvemos o dinheiro.
+          </div>
+        </div>
+        <div class="w-item">
+          <i class="fa-solid fa-medal w-icon"></i>
+          <div>90 dias de garantia de fábrica.</div>
+        </div>
+      </div>
+
+      <div class="description-box" style="padding-top: 0">
+        <h2 class="desc-title" style="font-size: 18px"><br>
+          O que você precisa saber sobre este produto
+        </h2>
+        <ul class="tech-list">
+          <li>
+            Com bomba de ar elétrica embutida (Bateria 4000mAh de Lítio sem
+            fio).
+          </li>
+          <li>Inclui 2 almofadas/travesseiros e bolsa de transporte.</li>
+          <li>Design flocado resistente à água e a perfurações.</li>
+          <li>Inflação automática rápida em apenas 3 minutos.</li>
+          <li>Peso máximo suportado: 300 kg (Modelos Queen/King).</li>
+          <li>Inclui remendo reparador.</li>
+        </ul>
+      </div>
+
+      <div class="description-box">
+        <h2 class="desc-title">Características principais</h2>
+        <table class="specs-table">
+          <tbody><tr>
+            <td>Marca</td>
+            <td>Joyfox</td>
+          </tr>
+          <tr>
+            <td>Modelo</td>
+            <td>Colchão Inflável Auto Inflável</td>
+          </tr>
+          <tr>
+            <td>Cor</td>
+            <td>Creme</td>
+          </tr>
+          <tr>
+            <td>Tamanho selecionado</td>
+            <td id="spec-size">Queen</td>
+          </tr>
+          <tr>
+            <td>Dimensões (C x L x A)</td>
+            <td id="spec-dim">203 cm x 154 cm x 46 cm</td>
+          </tr>
+          <tr>
+            <td>Peso</td>
+            <td id="spec-weight">7,5 kg</td>
+          </tr>
+          <tr>
+            <td>Peso Máximo Suportado</td>
+            <td id="spec-load">300 kg</td>
+          </tr>
+          <tr>
+            <td>Bomba embutida</td>
+            <td>Sim, elétrica 12V (sem fio)</td>
+          </tr>
+        </tbody></table>
+      </div>
+
+      <div class="video-container" onclick="toggleVideo()">
+        <video id="productVideo" class="video-element" playsinline="" loop="">
+          <source src="media/video.mp4" type="video/mp4">
+          Seu navegador não suporta vídeos.
+        </video>
+        <div class="video-overlay" id="videoOverlay">
+          <div class="play-button">
+            <i class="fa-solid fa-play"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="triple-image-section">
+        <img src="images/detalhe-colchao1.png" alt="Bomba embutida" class="feature-img">
+        <img src="images/detalhe-colchao2.png" alt="Superfície flocada impermeável" class="feature-img">
+        <img src="images/detalhe-colchao3.png" alt="Travesseiros Inclusos" class="feature-img">
+      </div>
+
+      <div class="description-box">
+        <h2 class="desc-title">Descrição</h2>
+        <div class="desc-content">
+          <p>
+            <strong>Bomba inflável de bateria de lítio recarregável e
+              removível</strong><br>
+            Em comparação com outras marcas de colchões de ar no mercado, nosso
+            colchão de ar é equipado com uma bomba inflável de bateria de lítio
+            sem fio de 4000 mAh, para que você possa dizer adeus ao problema de
+            não ter uma fonte de energia, seja para aproveitar o sol no jardim
+            no inverno ou para acampar ao ar livre no verão.
+          </p>
+          <br>
+          <p>
+            <strong>Inflação automática rápida</strong><br>
+            O colchão de ar infla em apenas 3 minutos com o toque de um botão. A
+            bomba de ar integrada proporciona uma operação mais silenciosa e sem
+            complicações. A bolsa de transporte incluída facilita o
+            armazenamento e o transporte.
+          </p>
+          <br>
+          <p>
+            <strong>Durável, à prova d'água e termorregulado</strong><br>
+            O colchão de ar é feito de cloreto de polivinila durável com uma
+            parte superior flocada à prova d'água. Nossa tecnologia multicamadas
+            também é resistente a perfurações e ajuda a regular a temperatura do
+            corpo para uma respirabilidade ideal.
+          </p>
+          <br>
+          <p>
+            <strong>Base antiderrapante com tecnologia respirável</strong><br>
+            O design patenteado da base estabilizadora com ventosas evita que o
+            colchão escorregue ou deslize acidentalmente.
+          </p>
+          <br>
+          <p>
+            <strong>Máximo conforto e estabilidade</strong><br>
+            A estrutura da superfície alivia vários pontos de pressão e oferece
+            suporte personalizado e uma experiência de sono com gravidade zero.
+            Qualquer lençol do tamanho correspondente pode ser usado.
+          </p>
+          <br>
+          <p>
+            <strong>Lista de produtos:</strong><br>
+            1* Colchão inflável<br>
+            1* Bomba de ar com bateria de lítio integrada<br>
+            3* Bicos cônicos de tamanhos diferentes<br>
+            1* Bolsa de armazenamento<br>
+            2* Travesseiros infláveis<br>
+            1* Kit de reparo<br>
+            1* Cabo de carregamento USB<br>
+            1* Manual de instruções
+          </p>
+          <br>
+          <p>
+            <em>Atenção: A dimensão, peso e capacidade de carga do produto variam
+              de acordo com o tamanho selecionado (Solteiro, Casal, Queen ou
+              King). Verifique as especificações exatas na ficha técnica
+              acima.</em>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="reviews-section">
+      <h2 class="desc-title" style="margin-bottom: 10px">
+        Opiniões do produto
+      </h2>
+      <div class="reviews-header-score">
+        <span class="score-big">4.9</span>
+        <div class="score-stars-big">★★★★★</div>
+        <span class="score-count">(12.840 avaliações)</span>
+      </div>
+
+      <script>
+        const reviewsData = [
+          {
+            name: "Thiago Ramos",
+            stars: 5,
+            date: "a 1 dia atrás",
+            text: "O fato de a bomba ser a bateria não ter fio salvou meu acampamento. Enche super rápido e não murchou nada de um dia pro outro.",
+            imgs: ["images/avali1.png"],
+          },
+          {
+            name: "Carla Mendes",
+            stars: 5,
+            date: "a 3 dias atrás",
+            text: "Colchão muito alto e confortável, parece cama de verdade. A cor creme é linda e o material de cima é bem gostoso.",
+            imgs: ["images/avali3.png"],
+          },
+          {
+            name: "Fernando Alves",
+            stars: 4,
+            date: "a 1 semana atrás",
+            text: "Produto premium, vem com a sacola e os travesseiros de brinde ajudam muito. Recomendo.",
+            imgs: ["images/avali6.png", "images/avali2.png"],
+          },
+          {
+            name: "Simone Faria",
+            stars: 5,
+            date: "a 2 semanas atrás",
+            text: "Peguei o Queen e coube tranquilo na minha barraca de 4 pessoas. Bomba super silenciosa.",
+            imgs: ["images/avali4.png"],
+          },
+          {
+            name: "Joel Dias",
+            stars: 5,
+            date: "a 1 semana atrás",
+            text: "Peguei o Queen, top d+. Bomba enche rapidona.",
+            imgs: ["images/avali5.png"],
+          },
+        ];
+        const reviewsContainer = document.currentScript.parentElement;
+        reviewsData.forEach((review) => {
+          let starsHtml = "";
+          for (let j = 0; j < 5; j++) {
+            if (j < review.stars) starsHtml += "★";
+            else starsHtml += "☆";
+          }
+          let photosHtml = "";
+          if (review.imgs && review.imgs.length > 0) {
+            photosHtml = `<div class="review-photos-carousel">`;
+            review.imgs.forEach((imgSrc) => {
+              photosHtml += `<img src="${imgSrc}" class="review-photo-item" onclick="openImageModal('${imgSrc}')">`;
+            });
+            photosHtml += `</div>`;
+          }
+
+          const div = document.createElement("div");
+          div.className = "review-card";
+          div.innerHTML = `
+              <div class="review-header">
+                  <span class="review-name">${review.name}</span>
+                  <i class="fa-solid fa-circle-check" style="color:#3483fa; font-size:12px;"></i>
+              </div>
+              <div class="review-rating-row">
+                  <span class="review-stars">${starsHtml}</span>
+                  <span class="review-date-ago">${review.date}</span>
+              </div>
+              <p class="review-content">${review.text}</p>
+              ${photosHtml}
+              <div class="review-actions">
+                  <div class="review-btn-useful">É útil <i class="fa-regular fa-thumbs-up"></i></div>
+                  <i class="fa-solid fa-ellipsis-vertical review-menu"></i>
+              </div>
+          `;
+          reviewsContainer.appendChild(div);
+        });
+      </script><div class="review-card">
+              <div class="review-header">
+                  <span class="review-name">Thiago Ramos</span>
+                  <i class="fa-solid fa-circle-check" style="color:#3483fa; font-size:12px;"></i>
+              </div>
+              <div class="review-rating-row">
+                  <span class="review-stars">★★★★★</span>
+                  <span class="review-date-ago">a 1 dia atrás</span>
+              </div>
+              <p class="review-content">O fato de a bomba ser a bateria não ter fio salvou meu acampamento. Enche super rápido e não murchou nada de um dia pro outro.</p>
+              <div class="review-photos-carousel"><img src="images/avali1.png" class="review-photo-item" onclick="openImageModal('images/avali1.png')"></div>
+              <div class="review-actions">
+                  <div class="review-btn-useful">É útil <i class="fa-regular fa-thumbs-up"></i></div>
+                  <i class="fa-solid fa-ellipsis-vertical review-menu"></i>
+              </div>
+          </div><div class="review-card">
+              <div class="review-header">
+                  <span class="review-name">Carla Mendes</span>
+                  <i class="fa-solid fa-circle-check" style="color:#3483fa; font-size:12px;"></i>
+              </div>
+              <div class="review-rating-row">
+                  <span class="review-stars">★★★★★</span>
+                  <span class="review-date-ago">a 3 dias atrás</span>
+              </div>
+              <p class="review-content">Colchão muito alto e confortável, parece cama de verdade. A cor creme é linda e o material de cima é bem gostoso.</p>
+              <div class="review-photos-carousel"><img src="images/avali3.png" class="review-photo-item" onclick="openImageModal('images/avali3.png')"></div>
+              <div class="review-actions">
+                  <div class="review-btn-useful">É útil <i class="fa-regular fa-thumbs-up"></i></div>
+                  <i class="fa-solid fa-ellipsis-vertical review-menu"></i>
+              </div>
+          </div><div class="review-card">
+              <div class="review-header">
+                  <span class="review-name">Fernando Alves</span>
+                  <i class="fa-solid fa-circle-check" style="color:#3483fa; font-size:12px;"></i>
+              </div>
+              <div class="review-rating-row">
+                  <span class="review-stars">★★★★☆</span>
+                  <span class="review-date-ago">a 1 semana atrás</span>
+              </div>
+              <p class="review-content">Produto premium, vem com a sacola e os travesseiros de brinde ajudam muito. Recomendo.</p>
+              <div class="review-photos-carousel"><img src="images/avali6.png" class="review-photo-item" onclick="openImageModal('images/avali6.png')"><img src="images/avali2.png" class="review-photo-item" onclick="openImageModal('images/avali2.png')"></div>
+              <div class="review-actions">
+                  <div class="review-btn-useful">É útil <i class="fa-regular fa-thumbs-up"></i></div>
+                  <i class="fa-solid fa-ellipsis-vertical review-menu"></i>
+              </div>
+          </div><div class="review-card">
+              <div class="review-header">
+                  <span class="review-name">Simone Faria</span>
+                  <i class="fa-solid fa-circle-check" style="color:#3483fa; font-size:12px;"></i>
+              </div>
+              <div class="review-rating-row">
+                  <span class="review-stars">★★★★★</span>
+                  <span class="review-date-ago">a 2 semanas atrás</span>
+              </div>
+              <p class="review-content">Peguei o Queen e coube tranquilo na minha barraca de 4 pessoas. Bomba super silenciosa.</p>
+              <div class="review-photos-carousel"><img src="images/avali4.png" class="review-photo-item" onclick="openImageModal('images/avali4.png')"></div>
+              <div class="review-actions">
+                  <div class="review-btn-useful">É útil <i class="fa-regular fa-thumbs-up"></i></div>
+                  <i class="fa-solid fa-ellipsis-vertical review-menu"></i>
+              </div>
+          </div><div class="review-card">
+              <div class="review-header">
+                  <span class="review-name">Joel Dias</span>
+                  <i class="fa-solid fa-circle-check" style="color:#3483fa; font-size:12px;"></i>
+              </div>
+              <div class="review-rating-row">
+                  <span class="review-stars">★★★★★</span>
+                  <span class="review-date-ago">a 1 semana atrás</span>
+              </div>
+              <p class="review-content">Peguei o Queen, top d+. Bomba enche rapidona.</p>
+              <div class="review-photos-carousel"><img src="images/avali5.png" class="review-photo-item" onclick="openImageModal('images/avali5.png')"></div>
+              <div class="review-actions">
+                  <div class="review-btn-useful">É útil <i class="fa-regular fa-thumbs-up"></i></div>
+                  <i class="fa-solid fa-ellipsis-vertical review-menu"></i>
+              </div>
+          </div><div class="review-card">
+              <div class="review-header"><span class="review-name">Thiago Ramos</span><i class="fa-solid fa-circle-check" style="color:#3483fa; font-size:12px;"></i></div>
+              <div class="review-rating-row"><span class="review-stars">★★★★★</span><span class="review-date-ago">a 1 dia atrás</span></div>
+              <p class="review-content">O fato de a bomba ser a bateria não ter fio salvou meu acampamento. Enche super rápido e não murchou nada de um dia pro outro.</p>
+              <div class="review-photos-carousel"><img src="images/avali1.png" class="review-photo-item" onclick="openImageModal('images/avali1.png')"></div>
+              <div class="review-actions">
+                  <div class="review-btn-useful">É útil <i class="fa-regular fa-thumbs-up"></i></div>
+                  <i class="fa-solid fa-ellipsis-vertical review-menu"></i>
+              </div>
+          </div><div class="review-card">
+              <div class="review-header"><span class="review-name">Carla Mendes</span><i class="fa-solid fa-circle-check" style="color:#3483fa; font-size:12px;"></i></div>
+              <div class="review-rating-row"><span class="review-stars">★★★★★</span><span class="review-date-ago">a 3 dias atrás</span></div>
+              <p class="review-content">Colchão muito alto e confortável, parece cama de verdade. A cor creme é linda e o material de cima é bem gostoso.</p>
+              <div class="review-photos-carousel"><img src="images/avali3.png" class="review-photo-item" onclick="openImageModal('images/avali3.png')"></div>
+              <div class="review-actions">
+                  <div class="review-btn-useful">É útil <i class="fa-regular fa-thumbs-up"></i></div>
+                  <i class="fa-solid fa-ellipsis-vertical review-menu"></i>
+              </div>
+          </div><div class="review-card">
+              <div class="review-header"><span class="review-name">Fernando Alves</span><i class="fa-solid fa-circle-check" style="color:#3483fa; font-size:12px;"></i></div>
+              <div class="review-rating-row"><span class="review-stars">★★★★☆</span><span class="review-date-ago">a 1 semana atrás</span></div>
+              <p class="review-content">Produto premium, vem com a sacola e os travesseiros de brinde ajudam muito. Recomendo.</p>
+              <div class="review-photos-carousel"><img src="images/avali6.png" class="review-photo-item" onclick="openImageModal('images/avali6.png')"><img src="images/avali2.png" class="review-photo-item" onclick="openImageModal('images/avali2.png')"></div>
+              <div class="review-actions">
+                  <div class="review-btn-useful">É útil <i class="fa-regular fa-thumbs-up"></i></div>
+                  <i class="fa-solid fa-ellipsis-vertical review-menu"></i>
+              </div>
+          </div><div class="review-card">
+              <div class="review-header"><span class="review-name">Simone Faria</span><i class="fa-solid fa-circle-check" style="color:#3483fa; font-size:12px;"></i></div>
+              <div class="review-rating-row"><span class="review-stars">★★★★★</span><span class="review-date-ago">a 2 semanas atrás</span></div>
+              <p class="review-content">Peguei o Queen e coube tranquilo na minha barraca de 4 pessoas. Bomba super silenciosa.</p>
+              <div class="review-photos-carousel"><img src="images/avali4.png" class="review-photo-item" onclick="openImageModal('images/avali4.png')"></div>
+              <div class="review-actions">
+                  <div class="review-btn-useful">É útil <i class="fa-regular fa-thumbs-up"></i></div>
+                  <i class="fa-solid fa-ellipsis-vertical review-menu"></i>
+              </div>
+          </div><div class="review-card">
+              <div class="review-header"><span class="review-name">Joel Dias</span><i class="fa-solid fa-circle-check" style="color:#3483fa; font-size:12px;"></i></div>
+              <div class="review-rating-row"><span class="review-stars">★★★★★</span><span class="review-date-ago">a 1 semana atrás</span></div>
+              <p class="review-content">Peguei o Queen, top d+. Bomba enche rapidona.</p>
+              <div class="review-photos-carousel"><img src="images/avali5.png" class="review-photo-item" onclick="openImageModal('images/avali5.png')"></div>
+              <div class="review-actions">
+                  <div class="review-btn-useful">É útil <i class="fa-regular fa-thumbs-up"></i></div>
+                  <i class="fa-solid fa-ellipsis-vertical review-menu"></i>
+              </div>
+          </div>
+    </div>
+
+    <div class="payment-methods-slider-container">
+      <div class="payment-track" id="paymentTrack">
+        <div class="payment-slide">
+          <svg class="payment-icon-svg" viewBox="0 0 50 35" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 6C4 4.89543 4.89543 4 6 4H44C45.1046 4 46 4.89543 46 6V29C46 30.1046 45.1046 31 44 31H6C4.89543 31 4 30.1046 4 29V6Z" stroke="#333" stroke-width="2" fill="none"></path>
+            <rect x="8" y="9" width="8" height="6" rx="1" fill="#3483fa"></rect>
+            <line x1="8" y1="20" x2="30" y2="20" stroke="#333" stroke-width="2"></line>
+            <line x1="8" y1="24" x2="20" y2="24" stroke="#333" stroke-width="2"></line>
+            <rect x="38" y="22" width="4" height="4" fill="#3483fa"></rect>
+          </svg>
+          <h3 class="payment-title">Escolha como pagar</h3>
+          <p class="payment-desc">
+            Com Mercado Pago, você paga com cartão, boleto ou Pix.
+          </p>
+        </div>
+        <div class="payment-slide">
+          <i class="fa-solid fa-box-open" style="font-size: 32px; color: #3483fa; margin-bottom: 10px"></i>
+          <h3 class="payment-title">Frete grátis</h3>
+          <p class="payment-desc">
+            Benefício em milhares de produtos a partir de R$ 19.
+          </p>
+        </div>
+        <div class="payment-slide">
+          <i class="fa-solid fa-shield-halved" style="font-size: 32px; color: #3483fa; margin-bottom: 10px"></i>
+          <h3 class="payment-title">Segurança</h3>
+          <p class="payment-desc">
+            Queremos que você receba o produto que está esperando.
+          </p>
+        </div>
+      </div>
+      <div class="payment-dots" id="payDots">
+        <div class="pm-dot active"></div>
+        <div class="pm-dot"></div>
+        <div class="pm-dot"></div>
+      </div>
+    </div>
+
+   <footer class="main-footer">
+	<div class="footer-links">
+<a href="#" style="pointer-events: none; cursor: default;">Minha conta</a>
+<a href="#" style="pointer-events: none; cursor: default;">Compras</a>
+<a href="#" style="pointer-events: none; cursor: default;">Histórico</a>
+<a href="#" style="pointer-events: none; cursor: default;">Favoritos</a>
+<a href="#" style="pointer-events: none; cursor: default;">Categorias</a>
+<a href="#" style="pointer-events: none; cursor: default;">Ofertas do dia</a>
+<a href="#" style="pointer-events: none; cursor: default;">Vender</a>
+<a href="#" style="pointer-events: none; cursor: default;">Contato</a>
+</div>
+      <div class="footer-legal1">
+		<p>Termos e condições • Promoções • Como cuidamos da sua privacidade • Acessibilidade • Informações sobre seguros • Blog • Afiliados • Tendências</p><br>
+		</div>
+		<div class="footer-legal2">
+        <p>© 1999-2026 Ebazar.com.br LTDA.</p>
+		<p>CNPJ n.º 03.007.331/0001-41 / Av. das Nações Unidas, nº 3.003, Bonfim, Osasco/SP - CEP 06233-903 - empresa do grupo Mercado Livre.<br></p>
+		</div>
+    </footer>
+
+    <div id="sticky-footer" class="sticky-footer hidden">
+      <div class="sticky-content">
+        <div class="sticky-price-info">
+          <span class="sticky-price-small">R$ <span id="sticky-price-value">139,90</span></span>
+          <span class="sticky-text-small">10x R$ <span id="sticky-installments-value">13,99</span> sem
+            juros</span>
+          <span id="sticky-qty-text" style="
+              font-size: 13px;
+              color: #333;
+              font-weight: 800;
+              margin-top: 4px;
+            ">1 Unidade - Queen</span>
+        </div>
+        <a href="https://pay.comprasreaisdodia.com/bz5KZbEMLRz37dL" id="btn-buy-sticky" class="btn-buy sticky-btn">Comprar agora</a> <!-- URL CHECKOUT -->
+      </div>
+    </div>
+
+    <script>
+      // Scroll do Header
+      const headerContainer = document.getElementById("dynamicHeader");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 10) headerContainer.classList.add("compact-mode");
+        else headerContainer.classList.remove("compact-mode");
+      });
+
+      // --- DADOS DINÂMICOS DE CADA TAMANHO (COM FOTOS, PREÇOS E LINKS EXATOS) ---
+      // ATENÇÃO: VOCÊ PRECISA CRIAR ESSAS IMAGENS NA PASTA images/
+      const sizeData = {
+        Solteiro: {
+          images: [
+            "images/colchao_solteiro1.png",
+            "images/colchao_solteiro22.png",
+            "images/colchao_solteiro3.png",
+            "images/colchao_solteiro4.png",
+            "images/colchao_solteiro5.png",
+          ],
+          dim: "191 cm x 99 cm x 46 cm",
+          peso: "5,5 kg",
+          load: "150 kg", // Exemplo, verifique o real
+          price: "89",
+          cents: "90",
+          installment: "8,99",
+          link: "https://pay.comprasreaisdodia.com/VroegN9VPzLGKwj", <!-- URL CHECKOUT -->
+        },
+        Casal: {
+          images: [
+            "images/colchao_casal1.png",
+            "images/colchao_casal2.png",
+            "images/colchao_casal3.png",
+            "images/colchao_casal4.png",
+            "images/colchao_casal5.png",
+          ],
+          dim: "191 cm x 137 cm x 46 cm",
+          peso: "6,5 kg",
+          load: "250 kg", // Exemplo, verifique o real
+          price: "119",
+          cents: "90",
+          installment: "11,99",
+          link: "https://pay.comprasreaisdodia.com/rn4RgQAJPpbgwBV", <!-- URL CHECKOUT -->
+        },
+        Queen: {
+          images: [
+            "images/colchao1.png",
+            "images/colchao2.png",
+            "images/colchao3.png",
+            "images/colchao4.png",
+            "images/colchao5.png",
+          ], // Queen usa as imagens padrão
+          dim: "203 cm x 154 cm x 46 cm",
+          peso: "7,5 kg",
+          load: "300 kg",
+          price: "139",
+          cents: "90",
+          installment: "13,99",
+          link: "https://pay.comprasreaisdodia.com/bz5KZbEMLRz37dL", <!-- URL CHECKOUT -->
+        },
+        King: {
+          images: [
+            "images/colchao_king1.png",
+            "images/colchao_king2.png",
+            "images/colchao_king3.png",
+            "images/colchao_king4.png",
+            "images/colchao_king5.png",
+          ],
+          dim: "203 cm x 183 cm x 46 cm",
+          peso: "8,5 kg",
+          load: "300 kg",
+          price: "149",
+          cents: "90",
+          installment: "14,99",
+          link: "https://pay.comprasreaisdodia.com/PyE2ZyQJDR4ZqRb", <!-- URL CHECKOUT -->
+        },
+      };
+
+      // --- RENDERIZAÇÃO DO CARROSSEL PRINCIPAL HORIZONTAL ---
+      function renderSlides(images) {
+        const track = document.getElementById("pdpTrack");
+        track.innerHTML = ""; // Limpa slides antigos
+        images.forEach((imgSrc, index) => {
+          const slideDiv = document.createElement("div");
+          slideDiv.className = "pdp-slide";
+          const img = document.createElement("img");
+          img.src = imgSrc;
+          img.alt = "Colchão Inflável Joyfox Premium";
+          img.className = "main-img";
+          // Só coloca ID na primeira imagem para compatibilidade
+          if (index === 0) img.id = "main-product-image";
+          slideDiv.appendChild(img);
+          track.appendChild(slideDiv);
+        });
+        // Reinicia o contador e os dots
+        document.getElementById("image-counter").textContent =
+          `1/${images.length}`;
+        updateDots(0);
+        track.scrollLeft = 0; // Volta o scroll pro inicio
+      }
+
+      // --- ATUALIZAÇÃO DOS DOTS DE PAGINAÇÃO ---
+      function updateDots(index) {
+        const dots = document.querySelectorAll(".p-dot");
+        dots.forEach((dot, i) => dot.classList.toggle("active", i === index));
+      }
+
+      // --- FUNÇÃO DE TROCA DE TAMANHO DINÂMICA (ATUALIZA FOTOS, PREÇOS, TEXTOS E LINKS) ---
+      // --- FUNÇÃO DE TROCA DE TAMANHO DINÂMICA (ATUALIZA FOTOS, PREÇOS, TEXTOS E LINKS) ---
+      function selectSize(sizeName, element) {
+        // ---> ESTA É A LINHA QUE VOCÊ DEVE REMOVER OU COMENTAR <---
+        // Rola para o topo da área de seleção para o usuário ver a troca de imagem
+        // document.getElementById('sizeSelectorArea').scrollIntoView({ behavior: 'smooth', block: 'start' }); // Linha original comentada
+
+        // Atualiza visual dos botões
+        document
+          .querySelectorAll(".qty-btn")
+          .forEach((btn) => btn.classList.remove("selected")); //
+        element.classList.add("selected"); //
+
+        // Pega os dados do tamanho escolhido
+        const data = sizeData[sizeName]; //
+        if (!data) return; //
+
+        // ... (restante do código da função) ...
+
+        // --- NOVO: Atualiza o Carrossel de Fotos ---
+        renderSlides(data.images);
+
+        // Atualiza os textos da interface
+        document.getElementById("size-text").innerText = sizeName;
+        const textFull = `1 Unidade - ${sizeName}`;
+        document.getElementById("qty-bold-text").innerText = textFull;
+        document.getElementById("sticky-qty-text").innerText = textFull;
+
+        // Atualiza Ficha Técnica
+        document.getElementById("spec-size").innerText = sizeName;
+        document.getElementById("spec-dim").innerText = data.dim;
+        document.getElementById("spec-weight").innerText = data.peso;
+        document.getElementById("spec-load").innerText = data.load;
+
+        // Atualiza Preços (Seção Principal)
+        document.getElementById("main-price-value").innerText = data.price;
+        document.getElementById("main-price-cents").innerText = data.cents;
+        document.getElementById("installments-value").innerText =
+          data.installment;
+
+        // Atualiza Preços (Sticky Footer)
+        document.getElementById("sticky-price-value").innerText =
+          `${data.price},${data.cents}`;
+        document.getElementById("sticky-installments-value").innerText =
+          data.installment;
+
+        // Atualiza links de compra
+        document.getElementById("btn-buy-now").href = data.link;
+        document.getElementById("btn-buy-sticky").href = data.link;
+      }
+
+      // --- LÓGICA DO VÍDEO CUSTOMIZADO ---
+      function toggleVideo() {
+        const container = document.querySelector(".video-container");
+        const video = document.getElementById("productVideo");
+        const icon = container.querySelector(".play-button i");
+        if (video.paused) {
+          video.play();
+          container.classList.add("playing");
+          icon.classList.remove("fa-play");
+          icon.classList.add("fa-pause");
+        } else {
+          video.pause();
+          container.classList.remove("playing");
+          icon.classList.remove("fa-pause");
+          icon.classList.add("fa-play");
+        }
+      }
+      // Garante que o ícone volta ao normal se o vídeo acabar sozinho
+      document
+        .getElementById("productVideo")
+        .addEventListener("ended", function () {
+          const container = document.querySelector(".video-container");
+          container.classList.remove("playing");
+          const icon = container.querySelector(".play-button i");
+          icon.classList.remove("fa-pause");
+          icon.classList.add("fa-play");
+        });
+
+      // --- LÓGICA DO MODAL LIGHTBOX DE IMAGENS ---
+      function openImageModal(src) {
+        const modal = document.getElementById("imageModal");
+        const img = document.getElementById("modalImage");
+        img.src = src;
+        modal.style.display = "flex";
+        setTimeout(() => {
+          modal.classList.add("show");
+        }, 10);
+      }
+      function closeImageModal() {
+        const modal = document.getElementById("imageModal");
+        modal.classList.remove("show");
+        setTimeout(() => {
+          modal.style.display = "none";
+        }, 300);
+      }
+
+      async function updateLocation() {
+        const locationText = document.getElementById("user-location-text");
+        try {
+          const response = await fetch("https://get.geojs.io/v1/ip/geo.json");
+          const data = await response.json();
+          if (data.city)
+            locationText.textContent = `Enviar para ${data.city}, ${data.region_code || "BR"}`;
+          else locationText.textContent = "Enviar para Capital, SP";
+        } catch (e) {
+          locationText.textContent = "Enviar para Capital, SP";
+        }
+      }
+      updateLocation();
+
+      // Escuta o scroll do carrossel para atualizar o contador e dots
+      pdpTrack.addEventListener("scroll", () => {
+        const width = pdpTrack.clientWidth;
+        const index = Math.round(pdpTrack.scrollLeft / width);
+        document.getElementById("image-counter").textContent = `${index + 1}/5`;
+        updateDots(index);
+      });
+
+      // Carrossel de Pagamentos
+      const payTrack = document.getElementById("paymentTrack");
+      const payDots = document.querySelectorAll(".pm-dot");
+      payTrack.addEventListener("scroll", () => {
+        const index = Math.round(payTrack.scrollLeft / payTrack.clientWidth);
+        payDots.forEach((dot, i) =>
+          dot.classList.toggle("active", i === index),
+        );
+      });
+
+      document
+        .getElementById("heartBtn")
+        .addEventListener("click", function () {
+          this.classList.toggle("liked");
+          this.querySelector("i").classList.toggle("fa-solid");
+          this.querySelector("i").classList.toggle("fa-regular");
+        });
+      document.getElementById("shareBtn").addEventListener("click", () => {
+        if (navigator.share)
+          navigator.share({ title: document.title, url: window.location.href });
+        else {
+          navigator.clipboard.writeText(window.location.href);
+          alert("Link copiado!");
+        }
+      });
+
+      const observer = new IntersectionObserver(
+        (e) => {
+          e.forEach((entry) =>
+            document
+              .getElementById("sticky-footer")
+              .classList.toggle("hidden", entry.isIntersecting),
+          );
+        },
+        { threshold: 0.1 },
+      );
+      observer.observe(document.getElementById("main-actions-area"));
+
+      // --- INICIALIZAÇÃO ---
+      // Carrega as imagens padrão (Queen) no início
+      document.addEventListener("DOMContentLoaded", () => {
+        renderSlides(sizeData["Queen"].images);
+      });
+    </script>
+  
+
+</body></html>

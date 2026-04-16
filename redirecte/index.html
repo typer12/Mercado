@@ -1,0 +1,325 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+<head>
+
+<script>
+  window.pixelId = "66a3fc115f57e7496bcf1525";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário Premiado - Verificação</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 60px 40px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .stage {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .stage.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            color: white;
+            font-size: 40px;
+        }
+
+        .icon.success {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #2d3748;
+            margin-bottom: 30px;
+            line-height: 1.4;
+        }
+
+        .loading-bar-container {
+            width: 100%;
+            height: 8px;
+            background: #e2e8f0;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 30px 0;
+        }
+
+        .loading-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            border-radius: 10px;
+            transition: width 0.3s ease-out;
+        }
+
+        .success-message {
+            display: none;
+            color: #38a169;
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 20px;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 700;
+            padding: 18px 50px;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(245, 87, 108, 0.4);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(245, 87, 108, 0.6);
+        }
+
+        .cta-button:active {
+            transform: translateY(-1px);
+        }
+
+        /* Shield SVG Icon */
+        .shield-icon {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        /* Checkmark animation */
+        .checkmark {
+            animation: checkmarkDraw 0.5s ease-in-out;
+        }
+
+        @keyframes checkmarkDraw {
+            0% {
+                transform: scale(0);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Spinner animation */
+        .spinner {
+            animation: spin 1.5s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .container {
+                padding: 40px 25px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            .cta-button {
+                font-size: 18px;
+                padding: 16px 40px;
+            }
+
+            .icon {
+                width: 70px;
+                height: 70px;
+                font-size: 35px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Etapa 1: Verificação de Segurança -->
+        <div id="stage1" class="stage active">
+            <div class="icon shield-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+            </div>
+            <h1>Verificando segurança do site</h1>
+            <div class="loading-bar-container">
+                <div id="loadingBar1" class="loading-bar" style="width: 11.4%;"></div>
+            </div>
+            <div id="successMsg1" class="success-message">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; margin-right: 8px;">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                Site 100% Seguro
+            </div>
+        </div>
+
+        <!-- Etapa 2: Verificação de Perfil -->
+        <div id="stage2" class="stage">
+            <div class="icon spinner">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+            </div>
+            <h1>Verificando se o seu perfil foi selecionado para participar da promoção...</h1>
+            <div class="loading-bar-container">
+                <div id="loadingBar2" class="loading-bar" style="width: 0%;"></div>
+            </div>
+        </div>
+
+        <!-- Etapa Final: Botão CTA -->
+        <div id="stage3" class="stage">
+            <div class="icon success checkmark">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+            </div>
+            <h1>🎉 Parabéns! Você foi selecionado!</h1>
+            <p style="color: #718096; font-size: 16px; margin: 20px 0;">Seu perfil está qualificado para participar do nosso questionário premiado.</p>
+            <a href="/rl1/" class="cta-button" onclick=>RESPONDER QUESTIONÁRIO!</a>
+        </div>
+    </div>
+
+    <script>
+        // Função para animar a barra de carregamento
+        function animateLoadingBar(elementId, duration, callback) {
+            const bar = document.getElementById(elementId);
+            const startTime = Date.now();
+            const interval = 30; // Atualizar a cada 30ms
+
+            const animate = () => {
+                const elapsed = Date.now() - startTime;
+                const progress = Math.min((elapsed / duration) * 100, 100);
+                bar.style.width = progress + '%';
+
+                if (progress < 100) {
+                    setTimeout(animate, interval);
+                } else if (callback) {
+                    callback();
+                }
+            };
+
+            animate();
+        }
+
+        // Função para mudar de etapa
+        function changeStage(currentStageId, nextStageId, delay = 0) {
+            setTimeout(() => {
+                const currentStage = document.getElementById(currentStageId);
+                const nextStage = document.getElementById(nextStageId);
+
+                if (currentStage) {
+                    currentStage.style.opacity = '0';
+                    setTimeout(() => {
+                        currentStage.classList.remove('active');
+                        if (nextStage) {
+                            nextStage.classList.add('active');
+                        }
+                    }, 500);
+                }
+            }, delay);
+        }
+
+        // Sequência de animações
+        window.addEventListener('DOMContentLoaded', () => {
+            // Etapa 1: Verificação de Segurança (1.5 segundos)
+            animateLoadingBar('loadingBar1', 1500, () => {
+                // Mostrar mensagem de sucesso
+                document.getElementById('successMsg1').classList.add('show');
+                
+                // Após 1 segundo, ir para Etapa 2
+                setTimeout(() => {
+                    changeStage('stage1', 'stage2');
+                    
+                    // Etapa 2: Verificação de Perfil (2 segundos)
+                    setTimeout(() => {
+                        animateLoadingBar('loadingBar2', 2000, () => {
+                            // Após completar, ir para Etapa 3 (Botão)
+                            setTimeout(() => {
+                                changeStage('stage2', 'stage3');
+                            }, 500);
+                        });
+                    }, 500);
+                }, 1000);
+            });
+        });
+    </script>
+
+</body></html>
