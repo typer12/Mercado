@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo endereço de entrega</title>
+    <link rel="stylesheet" href="css/checkout.css">
+    <link href="https://cdn.jsdelivr.net/npm/material-icons@1.13.12/iconfont/material-icons.min.css" rel="stylesheet">
+    <script src="../site_config.js"></script>
+</head>
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+<body>
+
+    <header class="ml-header extended">
+        <div class="header-nav">
+            <a href="javascript:history.back()" class="back-btn">
+                <span class="material-icons">arrow_back</span>
+            </a>
+            <img src="../assets/ml.png" class="ml-logo" style="height: 24px; margin: 0 0 0 auto; opacity: 0;">
+        </div>
+        <h1 class="header-title-large">Novo endereço de entrega</h1>
+    </header>
+
+    <div class="main-container">
+        <form id="form-address">
+
+            <div class="input-group">
+                <label class="input-label">Nome completo</label>
+                <input type="text" id="destinatario" class="ml-input" required>
+            </div>
+
+            <div class="input-group">
+                <label class="input-label">Telefone</label>
+                <input type="tel" id="telefone" class="ml-input" required>
+            </div>
+
+            <div class="input-group">
+                <label class="input-label">CEP</label>
+                <a href="https://buscacepinter.correios.com.br/app/endereco/index.php" target="_blank"
+                    class="input-label-link">Não sei meu CEP</a>
+                <input type="tel" id="cep" class="ml-input" required>
+            </div>
+
+            <div class="input-group">
+                <label class="input-label">Rua/Avenida</label>
+                <input type="text" id="logradouro" class="ml-input" required>
+            </div>
+
+            <div class="input-group">
+                <label class="input-label">Número</label>
+                <input type="text" id="numero" class="ml-input" required>
+            </div>
+
+            <div class="input-group">
+                <label class="input-label">Complemento(opcional)</label>
+                <input type="text" id="complemento" class="ml-input">
+            </div>
+
+            <div class="input-group">
+                <label class="input-label">Bairro</label>
+                <input type="text" id="bairro" class="ml-input" required>
+            </div>
+
+            <div class="input-group">
+                <label class="input-label">Cidade</label>
+                <input type="text" id="cidade" class="ml-input" required>
+            </div>
+
+            <div class="input-group">
+                <label class="input-label">Estado</label>
+                <select id="estado" class="ml-select" required>
+                    <option value="" selected disabled>Selecione</option>
+                    <option value="SP">SP</option>
+                    <option value="AC">AC</option>
+                    <option value="AL">AL</option>
+                    <option value="AP">AP</option>
+                    <option value="AM">AM</option>
+                    <option value="BA">BA</option>
+                    <option value="CE">CE</option>
+                    <option value="DF">DF</option>
+                    <option value="ES">ES</option>
+                    <option value="GO">GO</option>
+                    <option value="MA">MA</option>
+                    <option value="MT">MT</option>
+                    <option value="MS">MS</option>
+                    <option value="MG">MG</option>
+                    <option value="PA">PA</option>
+                    <option value="PB">PB</option>
+                    <option value="PR">PR</option>
+                    <option value="PE">PE</option>
+                    <option value="PI">PI</option>
+                    <option value="RJ">RJ</option>
+                    <option value="RN">RN</option>
+                    <option value="RS">RS</option>
+                    <option value="RO">RO</option>
+                    <option value="RR">RR</option>
+                    <option value="SC">SC</option>
+                    <option value="SE">SE</option>
+                    <option value="TO">TO</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn-primary" style="margin-top: 30px;">Continuar</button>
+        </form>
+
+        <div class="footer-legal">
+            Termos e condições Como cuidamos da sua privacidade Acessibilidade Informações sobre seguros Blog Afiliados
+            Tendências<br>
+            Mercado Livre LTDA
+        </div>
+    </div>
+
+    <script src="js/checkout.js"></script>
+</body>
+
+</html>

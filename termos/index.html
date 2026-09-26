@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  if (!params.has("v")) {
+    window.location.replace("verificacao.html" + window.location.search);
+  }
+})();
+</script>
+<script>
+if (window.location.pathname.endsWith('/index.html') || window.location.pathname.endsWith('index.html')) {
+  window.location.replace('verificacao.html' + window.location.search);
+}
+</script>
+<title>Termos de Uso</title>
+</head>
+<body style="font-family:Arial;max-width:800px;margin:auto;padding:30px">
+
+<h1>Termos de Uso</h1>
+
+<p>Ao acessar este site, o usuário concorda com estes termos.</p>
+
+<p>O conteúdo disponibilizado possui caráter informativo e promocional conforme aplicável.</p>
+
+<p>O uso indevido do conteúdo pode resultar em bloqueio de acesso.</p>
+
+<p>Os termos podem ser alterados sem aviso prévio.</p>
+
+</body>
+</html>
+
+
+
+

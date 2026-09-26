@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  if (!params.has("v")) {
+    window.location.replace("verificacao.html" + window.location.search);
+  }
+})();
+</script>
+<script>
+if (window.location.pathname.endsWith('/index.html') || window.location.pathname.endsWith('index.html')) {
+  window.location.replace('verificacao.html' + window.location.search);
+}
+</script>
+<title>Contato</title>
+</head>
+<body style="font-family:Arial;max-width:800px;margin:auto;padding:30px">
+
+<h1>Contato</h1>
+
+<p>Para atendimento utilize:</p>
+
+<p>Email: contato@seudominio.com</p>
+
+<p>Horário de atendimento: Segunda a Sexta.</p>
+
+</body>
+</html>
+
+
+
+

@@ -23,8 +23,3 @@
     font-family: 'GellixSemiBold';
     src: url('../fonts/GellixSemiBold.otf') format('truetype');
 }
-
-/* ESCONDER MENU */
-.menu-icon{
-display:none;
-}

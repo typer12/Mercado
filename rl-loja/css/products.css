@@ -54,14 +54,13 @@ body {
 .bracelet-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 5px;
-    padding-top: 20px;
+    gap: 10px;
+    padding: 10px;
 }
 
 .bracelet-item {
-    width: 44%;
-    margin: 10px;
+    width: calc(50% - 10px);
+    margin: 0;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     text-align: center;
     position: relative;
@@ -517,7 +516,7 @@ body {
     color: #333;
     font-family: 'GellixRegular';
     margin-top: 10px;
-    padding-right: 10%;
+    padding-right: 0;
 }
 
 .pergunta-botao {
@@ -757,8 +756,8 @@ body {
 }
 
 .images img {
-    width: 125px;
-    height: 100px;
+    max-width: 100%;
+    height: auto;
     border-radius: 10px;
     object-fit: cover;
 }
@@ -832,4 +831,8 @@ p {
     font-size: 22px;
     text-align: center;
     margin-bottom: -10px;
+}
+
+html, body {
+    overflow-x: hidden;
 }

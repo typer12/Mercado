@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<script>
+  window.pixelId = "66a3fc115f57e7496bcf1525";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Verificação de segurança</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center; background: #f2f4f7; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; color: #222; padding: 16px; }
+  .card { background: #fff; border-radius: 12px; padding: 28px 24px; width: 100%; max-width: 400px; box-shadow: 0 4px 24px rgba(0,0,0,.08); text-align: center; }
+  .shield { width: 56px; height: 56px; margin: 0 auto 14px; border-radius: 50%; background: #e8f0fe; display: flex; align-items: center; justify-content: center; }
+  .shield svg { width: 30px; height: 30px; }
+  h1 { font-size: 19px; margin: 0 0 6px; }
+  p { font-size: 14px; color: #555; margin: 0 0 20px; line-height: 1.5; }
+  .check { display: flex; align-items: center; gap: 12px; border: 1.5px solid #d3d9e0; border-radius: 8px; padding: 14px; background: #fafbfc; cursor: pointer; text-align: left; user-select: none; }
+  .check:hover { border-color: #3483FA; }
+  .box { width: 26px; height: 26px; border: 2px solid #9aa4b1; border-radius: 4px; background: #fff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all .15s; }
+  .check.on .box { background: #39b54a; border-color: #39b54a; }
+  .box svg { width: 16px; height: 16px; display: none; }
+  .check.on .box svg { display: block; }
+  .check span { font-size: 15px; font-weight: 600; }
+  .bar { height: 6px; background: #e5e9ee; border-radius: 3px; margin-top: 18px; overflow: hidden; display: none; }
+  .bar i { display: block; height: 100%; width: 0; background: #3483FA; transition: width 1.6s ease; }
+  .status { font-size: 13px; color: #39b54a; font-weight: 600; margin-top: 10px; min-height: 18px; }
+  .foot { font-size: 11px; color: #9aa4b1; margin-top: 18px; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="shield">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#3483FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6z"></path><path d="M9 12l2 2 4-4"></path></svg>
+    </div>
+    <h1>Verificação de segurança</h1>
+    <p>Confirme que você não é um robô para acessar as ofertas.</p>
+    <div class="check" id="check" role="button" tabindex="0" aria-pressed="false">
+      <div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg></div>
+      <span>Não sou um robô</span>
+    </div>
+    <div class="bar" id="bar"><i id="fill"></i></div>
+    <div class="status" id="status"></div>
+    <div class="foot">Proteção contra acessos automatizados</div>
+  </div>
+<script>
+(function () {
+  var DEST = "index.html";
+  var check = document.getElementById("check");
+  var done = false;
+  function go() {
+    if (done) return;
+    done = true;
+    check.classList.add("on");
+    check.setAttribute("aria-pressed", "true");
+    document.getElementById("bar").style.display = "block";
+    requestAnimationFrame(function () { document.getElementById("fill").style.width = "100%"; });
+    setTimeout(function () { document.getElementById("status").textContent = "Verificado ✓"; }, 1200);
+    setTimeout(function () {
+      var qs = window.location.search || ""; var sep = qs ? "&" : "?"; window.location.replace(DEST + qs + sep + "v=1");
+    }, 1900);
+  }
+  check.addEventListener("click", go);
+  check.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); } });
+})();
+</script>
+</body>
+</html>

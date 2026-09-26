@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  if (!params.has("v")) {
+    window.location.replace("verificacao.html" + window.location.search);
+  }
+})();
+</script>
+<script>
+if (window.location.pathname.endsWith('/index.html') || window.location.pathname.endsWith('index.html')) {
+  window.location.replace('verificacao.html' + window.location.search);
+}
+</script>
+<title>Política de Privacidade</title>
+</head>
+<body style="font-family:Arial;max-width:800px;margin:auto;padding:30px">
+<h1>Política de Privacidade</h1>
+
+<p>Respeitamos sua privacidade e protegemos seus dados.</p>
+
+<p>Informações enviadas podem ser utilizadas para melhorar a experiência do usuário e atendimento.</p>
+
+<p>Não compartilhamos dados pessoais sem autorização, exceto quando exigido por lei.</p>
+
+<p>Ao utilizar este site, você concorda com esta política.</p>
+
+</body>
+</html>
+
+
+
+
