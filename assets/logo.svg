@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" role="img" aria-label="Loja">
+  <g fill="none" stroke="#2D3277" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10 18h28l-2.5 22h-23z"/>
+    <path d="M17 18v-4a7 7 0 0 1 14 0v4"/>
+  </g>
+  <circle cx="24" cy="30" r="3" fill="#2D3277"/>
+</svg>
