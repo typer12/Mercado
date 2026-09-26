@@ -1,0 +1,17 @@
+/* Desktop: enquadra o site mobile em coluna central de 480px */
+@media (min-width: 768px) {
+  html { background: #e9ebee; }
+  body {
+    max-width: 480px;
+    margin: 0 auto !important;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.18);
+    min-height: 100vh;
+  }
+  header:not(.ml-header-container):not(.checkout-header), .sticky-footer, .notification, #popup, #perguntaFeita {
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    width: 100% !important;
+    max-width: 480px !important;
+  }
+}
